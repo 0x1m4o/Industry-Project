@@ -18,17 +18,22 @@ use App\Http\Controllers\Auth\RegisterController;
 
 Route::get('/', function () {
     return view('user.landing', [
-        'title' => "Landing",
+        'title' => "Home",
     ]);
 });
 
-// Login
-Route::get('/login', [LoginController::class, 'index']);
-Route::post('/login', [LoginController::class, 'login']);
+Route::middleware(['guest:web'])->group(function () {
+    // Login
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
 
-// Register
-Route::get('/register', [RegisterController::class, 'index']);
-Route::post('/register', [RegisterController::class, 'register']);
+    // Register
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register']);
+});
 
+// Logout
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+// Program
 Route::get('/program', [ProgramController::class, 'index']);

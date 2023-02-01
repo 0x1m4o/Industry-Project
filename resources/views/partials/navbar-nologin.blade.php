@@ -234,7 +234,7 @@
             role="button" href="/login">Masuk</a>
 
         <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffb5; background: rgb(42, 42, 42)"
-            role="button" href="/signup">Daftar</a>
+            role="button" href="/register">Daftar</a>
     </div>
 </div>
 

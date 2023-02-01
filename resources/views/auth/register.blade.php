@@ -9,7 +9,7 @@
             @csrf
                 <div class="mb-3">
                     <label for="nama" class="form-label fs-4">Nama Lengkap</label>
-                    <input type="text" class="input form-control @error('name') is-invalid @enderror" id="nama" name="name" aria-describedby="emailHelp" placeholder="Vanessa Oey" value="{{ old('name') }}">
+                    <input type="text" class="input form-control @error('name') is-invalid @enderror" id="nama" name="name" aria-describedby="emailHelp" placeholder="Vanessa Oey" value="{{ old('name') }}" autofocus>
                     @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
