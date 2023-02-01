@@ -1,0 +1,49 @@
+.footer-logo {
+    width: 65px;
+    height: 80px;
+    margin: 30px 150px;
+}
+
+
+.icon-background {
+    position: relative;
+    background-color: #FF0000;
+    height: 50px;
+    width: 50px; 
+    border-radius: 50%;
+}
+
+
+.icon-background2 {
+    position: relative;
+    background-color: #E1306C;
+    height: 50px;
+    width: 50px; 
+    border-radius: 50%;
+}
+
+.icon-background3 {
+    position: relative;
+    background-color: #4267B2;
+    height: 50px;
+    width: 50px; 
+    border-radius: 50%;
+}
+
+.icon-background4 {
+    position: relative;
+    background-color: #25D366;
+    height: 50px;
+    width: 50px; 
+    border-radius: 50%;
+}
+
+.icon {
+    position: absolute;
+    top: 11px;
+    left: 11px;
+}
+
+iframe {
+    border-radius: 10px;
+}
