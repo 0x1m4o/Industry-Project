@@ -18,3 +18,15 @@ Route::get('/', function () {
         'title' => "Landing",
     ]);
 });
+
+Route::get('/login', function () {
+    return view('auth.login', [
+        'title' => "Masuk",
+    ]);
+});
+
+Route::get('/register', function () {
+    return view('auth.register', [
+        'title' => "Daftar",
+    ]);
+});
