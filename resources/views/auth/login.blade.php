@@ -1,5 +1,6 @@
 @extends('layouts.no-navfooter')
 
+
 @section('content')
 
 <div class="container">

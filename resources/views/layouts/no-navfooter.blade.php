@@ -9,13 +9,39 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/auth.css">
 
     <style>
         body {
             font-family: 'Poppins', sans-serif !important;
         }
-    </style>
+        .input {
+            width: 100%;
+            padding: 6px;
+            border-radius: 5px;
+            border: 1px solid grey;
+        }
+        .input:focus {
+            border-color: #187bcd !important;
+            outline: 0 !important;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+                0 0 8px rgba(102, 175, 233, 0.6) !important;
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075),
+                0 0 8px rgba(102, 175, 233, 0.6) !important;
+        }
+        .shadow-btn:hover {
+            background-color: #1567aa !important;
+        }
+        a:hover {
+            text-decoration: underline !important;
+        }
+
+        @media (min-width: 600px) {
+            .login {
+                max-width: 200px;
+            }
+        }
+
+            </style>
     {{-- Blade CSS --}}
     @yield('styles')
 
