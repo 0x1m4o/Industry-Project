@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +20,7 @@ Route::get('/', function () {
     ]);
 });
 
+
 Route::get('/login', function () {
     return view('auth.login', [
         'title' => "Masuk",
@@ -30,3 +32,5 @@ Route::get('/register', function () {
         'title' => "Daftar",
     ]);
 });
+
+Route::get('/program', [ProgramController::class, 'index']);
