@@ -1,7 +1,9 @@
 <?php
 
-use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,17 +22,13 @@ Route::get('/', function () {
     ]);
 });
 
+// Login
+Route::get('/login', [LoginController::class, 'index']);
+Route::post('/login', [LoginController::class, 'login']);
 
-Route::get('/login', function () {
-    return view('auth.login', [
-        'title' => "Masuk",
-    ]);
-});
+// Register
+Route::get('/register', [RegisterController::class, 'index']);
+Route::post('/register', [RegisterController::class, 'register']);
 
-Route::get('/register', function () {
-    return view('auth.register', [
-        'title' => "Daftar",
-    ]);
-});
 
 Route::get('/program', [ProgramController::class, 'index']);

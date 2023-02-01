@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title }} | Maritory</title>
-
+    <link rel="icon" href="/img/itc.png">
 
     {{-- Blade CSS --}}
     @yield('styles')
