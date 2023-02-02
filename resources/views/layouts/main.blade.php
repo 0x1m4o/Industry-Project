@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{{ $title }} | IT Club</title>
+    <link rel="icon" href="/img/itc.png">
+
 
     {{-- CSS Template --}}
     @yield('styles')
@@ -31,7 +33,7 @@
 <body>
     <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous"></script>
     <!-- Navbar -->
-    @if ($title == 'Landing')
+    @if ($title == 'Home')
         @include('partials.navbar-nologin')
     @else
         @include('partials.navbar')
