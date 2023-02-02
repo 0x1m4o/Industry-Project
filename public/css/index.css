@@ -22,3 +22,26 @@ input[type="color"]:focus,
     box-shadow: 0 1px 1px #187ccd7c inset, 0 0 5px #187ccd31;
     outline: 0 none;
 }
+
+.a-tag {
+    text-decoration: none;
+    color: var(--bs-nav-link-color) !important;
+}
+
+.box {
+    transition: box-shadow 0.3s;
+    float: left;
+}
+
+.box:hover {
+    box-shadow: 0 0 9px rgba(33, 33, 33, 0.2);
+    transform: scale(1.1);
+}
+
+.aktif {
+    color: #187bcd !important;
+    font-weight: bold;
+}
+h5 {
+    margin: 0;
+}

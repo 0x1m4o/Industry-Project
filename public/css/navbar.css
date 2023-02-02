@@ -2,11 +2,6 @@
     border: 1px solid rgba(113, 111, 111, 0.652);
 }
 
-.aktif {
-    color: #187bcd !important;
-    font-weight: bold;
-}
-
 .nav-link {
     transition: 0.5s all ease-in-out;
 }
@@ -73,30 +68,102 @@
     width: 100%;
 }
 
+#profile-btn-tog,
+.profile-pict-tog,
+.profile-title-tog {
+    z-index: -1;
+    display: none;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 /* Responsive Navbar */
 @media (max-width: 991px) {
-    #navbarSearchContent.collapse,
-    #navbarSearchContent {
-        position: absolute;
-        width: 50%;
-        transition: width 400ms ease-in-out;
-    }
-
-    #navbarSearchContent {
-        width: 0;
-        right: 90px;
-        margin-right: 10px;
-    }
-
-    #navbarSearchContent.collapsing {
-        visibility: hidden;
-        transition: 100ms;
-    }
-    .btn-search {
+    /* .btn-search {
         display: none;
+    } */
+
+    #navbarSearchContent form,
+    #navbarSearchContent .input-form {
+        width: 100%;
     }
 
     .navbar {
         padding: 20px;
     }
+    .navbar-toggler,
+    #btn-search {
+        height: 51px !important;
+    }
+
+    #profile-btn-tog,
+    .profile-pict-tog,
+    .profile-title-tog {
+        display: block;
+    }
+}
+
+/* Navbar After Login */
+.profile-pict {
+    width: 41px;
+    height: 41px;
+    border-radius: 100%;
+    border: 1px solid black;
+}
+
+.dropdown-menu {
+    box-shadow: 0 0 9px rgba(33, 33, 33, 0.2);
+}
+
+.dropdown-menu-center {
+    right: auto !important;
+    left: 55% !important;
+    top: 120% !important;
+    -webkit-transform: translate(-53%, 0) !important;
+    -o-transform: translate(-53%, 0) !important;
+    transform: translate(-53%, 0) !important;
+}
+
+.dropdown .dropdown-menu-profile {
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    max-height: 0;
+    border: none;
+    display: block;
+    padding: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu-profile {
+    max-height: 700px;
+    display: block;
+    opacity: 1;
+}
+
+.item-profile {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.item-profile h5 {
+    margin: 0 8px;
+}
+
+.go-logout {
+    color: rgba(255, 0, 0, 0.813);
+}
+
+.item-profile:hover {
+    background-color: rgba(128, 128, 128, 0.23);
+    border-radius: 8px;
 }

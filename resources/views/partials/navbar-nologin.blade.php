@@ -2,7 +2,6 @@
 
 {{-- Navbar Before Login --}}
 <div class="nav-wrapper">
-
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <img src="/img/itc.png" alt="Logo" width="80" height="65" class="d-flex align-items-center" />
@@ -40,7 +39,7 @@
                         <input class="form-control search-bar me-2" type="search" placeholder="Search"
                             aria-label="Search">
                     </div>
-                    <button class="btn btn-outline-dark btn-search" type="submit">
+                    <button class="btn btn-outline-dark btn-search box" type="submit">
                         <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
                     </button>
                 </form>
@@ -48,10 +47,10 @@
             <!-- Navbar Supported Content -->
             <div id="navbarSupportedContent"
                 class="mx-4 d-flex justify-content-end navbar-collapse offcanvas-end d-none">
-                <a class="btn btn-light btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
+                <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
                     href="/signup">Daftar</a>
             </div>
 

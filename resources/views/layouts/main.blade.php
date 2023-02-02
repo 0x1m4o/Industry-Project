@@ -14,6 +14,9 @@
 
     {{-- Link --}}
 
+    {{-- CDN Jquery --}}
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
     {{-- Font Google Poppins --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,9 +36,9 @@
 <body>
     <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous"></script>
     <!-- Navbar -->
-    @if ($title == 'Home')
+    @if ($title == 'Landing')
         @include('partials.navbar-nologin')
-    @else
+    @elseif($title == 'Homepage')
         @include('partials.navbar')
     @endif
 
@@ -44,18 +47,11 @@
     {{-- Footer --}}
     @include('partials.footer')
 
-
-    {{-- Calender JS --}}
-
-    <script src="/calendar/dist/jquery.simple-calendar.js"></script>
-    <script src="/js/calendar.js"></script>
-
     {{-- Dropdown JS --}}
     <script src="/js/dropdown.js"></script>
 
     {{-- Iconify JS --}}
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-
 
 </body>
 
