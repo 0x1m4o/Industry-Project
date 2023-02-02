@@ -4,13 +4,27 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ $title }} | Maritory</title>
 
+    <title>{{ $title }} | IT Club</title>
 
-    {{-- Blade CSS --}}
+    {{-- CSS Template --}}
     @yield('styles')
 
+    {{-- Link --}}
+
+    {{-- Font Google Poppins --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    {{-- Bootstrap --}}
     @vite(['resources/js/app.js'])
+
+    {{-- Custom CSS --}}
+    <link rel="stylesheet" href="/css/index.css">
+
+    {{-- Icon --}}
+    <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
 
 </head>
 
@@ -39,10 +53,6 @@
 
     {{-- Iconify JS --}}
     <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
-    </script>
 
 
 </body>
