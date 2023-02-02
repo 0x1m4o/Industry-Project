@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +18,22 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('user.landing', [
-        'title' => "Landing",
+        'title' => "Home",
     ]);
 });
+
+Route::middleware(['guest:web'])->group(function () {
+    // Login
+    Route::get('/login', [LoginController::class, 'index'])->name('login');
+    Route::post('/login', [LoginController::class, 'login']);
+
+    // Register
+    Route::get('/register', [RegisterController::class, 'index'])->name('register');
+    Route::post('/register', [RegisterController::class, 'register']);
+});
+
+// Logout
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+// Program
+Route::get('/program', [ProgramController::class, 'index']);
