@@ -1,15 +1,20 @@
 .footer-logo {
-    width: 65px;
+    width: 85px;
     height: 80px;
     margin: 30px 150px;
 }
 
+.jurusan {
+    font-size: 20px;
+    font-weight: 600;
+
+}
 
 .icon-background {
     position: relative;
     background-color: #FF0000;
     height: 50px;
-    width: 50px; 
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -18,7 +23,7 @@
     position: relative;
     background-color: #E1306C;
     height: 50px;
-    width: 50px; 
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -26,7 +31,7 @@
     position: relative;
     background-color: #4267B2;
     height: 50px;
-    width: 50px; 
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -34,7 +39,7 @@
     position: relative;
     background-color: #25D366;
     height: 50px;
-    width: 50px; 
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -46,4 +51,26 @@
 
 iframe {
     border-radius: 10px;
+}
+
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199.9px) {
+    iframe {
+        border-radius: 10px;
+        width: 500px;
+        height: 350px;
+    }
+
+    .jurusan {
+        text-align: center;
+        line-height: 30px;
+        letter-spacing: 0.5px;
+        font-size: 20px;
+        font-weight: 600;
+
+    }
+
+    .footer-logo {
+        margin: 30px 120px;
+    }
 }
