@@ -40,9 +40,9 @@
                 max-width: 200px;
             }
         }
-
-            </style>
+    </style>
     {{-- Blade CSS --}}
+
     @yield('styles')
 
     @vite(['resources/js/app.js'])
