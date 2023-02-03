@@ -79,7 +79,7 @@
                                         </div>
                                     </a>
                                     <hr class="my-2" style="border: 1px solid black;">
-                                    <a class="a-tag item-drop" href="/program">
+                                    <a class="a-tag item-drop" href="/logout">
                                         <div class="item-profile py-2 go-logout">
                                             <iconify-icon class="ms-1" icon="ic:round-exit-to-app" rotate="180deg"
                                                 width="25px">

@@ -36,11 +36,11 @@
 <body>
     <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous"></script>
     <!-- Navbar -->
-    @if ($title == 'Landing')
-        @include('partials.navbar-nologin')
-    @elseif($title == 'Homepage')
+    @auth
         @include('partials.navbar')
-    @endif
+    @else
+        @include('partials.navbar-nologin')
+    @endauth
 
     @yield('content')
 
