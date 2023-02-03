@@ -16,13 +16,12 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
+// User
 Route::get('/', function () {
-    return view('user.landing', [
-        'title' => "Landing",
+    return view('user.home', [
+        'title' => "Homepage",
     ]);
 });
-
-
 
 Route::middleware(['guest:web'])->group(function () {
     // Login
@@ -39,11 +38,3 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-
-
-// User
-Route::get('/user/home', function () {
-    return view('user.home', [
-        'title' => "Homepage",
-    ]);
-});

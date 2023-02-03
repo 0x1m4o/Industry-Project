@@ -60,7 +60,7 @@
                             <a href="/profile" class="d-flex align-items-center justify-content-center a-tag"
                                 role="button" aria-expanded="false">
                                 <img class="profile-pict" src="/img/itc.png" alt="">
-                                <h5 class="profile-title m-0 ms-2">Badzlan</h5>
+                                <h5 class="profile-title m-0 ms-2">{{ explode(" ", auth()->user()->name)[0] }}</h5>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-center dropdown-menu-profile py-2">
                                 <div class="drop-wrapper p-1 px-2">
