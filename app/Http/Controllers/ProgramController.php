@@ -41,7 +41,7 @@ class ProgramController extends Controller
     }
 
     public function edit(Program $programs) {
-        return view('program.create', compact('programs'));
+        return view('program.edit', compact('programs'));
     }
 
     public function update(Request $request, Program $programs) {
