@@ -50,8 +50,8 @@
                 <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
-                    href="/register">Daftar</a>
+                <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                    href="/signup">Daftar</a>
             </div>
 
         </div>

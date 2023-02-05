@@ -5,8 +5,8 @@
     <div class="row d-flex">
         <div class="col-5 p-0">
             <img src="img/itc.png" alt="" class="footer-logo">
-            <h4 class="jurusan">Information And Technology Club</h4>
-            <p class="address">Jl. Swadaya, RT.7/RW.7, Jatinegara,
+            <h4>Information And Technology Club</h4>
+            <p class="text-center ms-3 mt-3" style="font-size: 14px; width:300px;">Jl. Swadaya, RT.7/RW.7, Jatinegara,
                 Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930</p>
 
 

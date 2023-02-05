@@ -16,9 +16,10 @@ return new class extends Migration
         Schema::create('programs', function (Blueprint $table) {
             $table->id();
             $table->string('gambar')->nullable();
-            $table->string('nama')->nullable();
+            $table->string('nama', 255)->nullable();
+            $table->string('slug', 255)->nullable();
             $table->string('category')->nullable();
-            $table->string('deskripsi')->nullable();
+            $table->string('deskripsi', 255)->nullable();
             $table->timestamps();
         });
     }
