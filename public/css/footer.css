@@ -93,7 +93,17 @@ iframe {
         letter-spacing: 0.5px;
         font-size: 17px;
         font-weight: 600;
+        text-align: center;
 
+    }
+
+    .address {
+        font-size: 14px;
+        width: 300px;
+        text-align: center;
+        margin-left: 16px;
+        margin-top: 16px;
+        text-align: center;
     }
 
     .footer-logo {
@@ -111,13 +121,14 @@ iframe {
     .jurusan {
         font-size: 14px;
         font-weight: 600;
+        text-align: center;
 
     }
 
     .address {
-        font-size: 11px;
+        font-size: 12px;
         width: 225px;
-        margin-left: 8px;
+        margin-left: 0px;
     }
 
     .footer-logo {
@@ -208,8 +219,8 @@ iframe {
         position: relative;
         display: flex;
         background-color: #FF0000;
-        height: 35px;
-        width: 35px;
+        height: 28px;
+        width: 28px;
         border-radius: 50%;
     }
 
@@ -218,8 +229,8 @@ iframe {
         position: relative;
         display: flex;
         background-color: #E1306C;
-        height: 35px;
-        width: 35px;
+        height: 28px;
+        width: 28px;
         border-radius: 50%;
         margin: 0px 6px;
     }
@@ -228,8 +239,8 @@ iframe {
         position: relative;
         display: flex;
         background-color: #4267B2;
-        height: 35px;
-        width: 35px;
+        height: 28px;
+        width: 28px;
         border-radius: 50%;
     }
 
@@ -237,52 +248,180 @@ iframe {
         position: relative;
         display: flex;
         background-color: #25D366;
-        height: 35px;
-        width: 35px;
+        height: 28px;
+        width: 28px;
         border-radius: 50%;
         margin: 0px 6px;
     }
 
     .icon {
         position: absolute;
-        top: 5px;
+        top: 2px;
         left: 5px;
     }
 
     .sosmed {
-        display: flex;
+        justify-content: center;
         margin: 12px 0px 0px 0px;
+    }
+
+    iconify-icon {
+        width: 18px;
     }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 499.9px) {
 
+
     .row {
-        margin: 0px 10px;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .col-5 {
+        width: 400px;
     }
 
     iframe {
-        width: 150px;
+        margin-top: 20px;
+        width: 200px;
         height: 120px;
+
+    }
+
+    .maps {
+        display:flex;
+        justify-content: center;
     }
 
     .jurusan {
-        font-size: 9px;
-        font-weight: 600;
+        font-size: 13px;
+        font-weight: 800;
         text-align: center;
+
+
+    }
+
+    .address {
+        font-size: 9px;
+        width: 210px;
+    }
+
+    .logo-mob {
+        width: 250px;
+    }
+
+    .footer-logo {
+        width: 75px;
+        height: 70px;
+        margin: 20px 80px;
+
+    }
+
+    .icon-background {
+        position: relative;
+        background-color: #FF0000;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+    }
+
+
+    .icon-background2 {
+        position: relative;
+        background-color: #E1306C;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin: 0px 8px;
+    }
+
+    .icon-background3 {
+        position: relative;
+        background-color: #4267B2;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+    }
+
+    .icon-background4 {
+        position: relative;
+        background-color: #25D366;
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+        margin: 0px 8px;
+    }
+
+    .icon {
+        position: absolute;
+        top: 0px;
+        left: 5px;
+    }
+
+    .sosmed {
+        margin: 0px 0px 0px 60px;
+    }
+
+    iconify-icon {
+        width: 15px;
+    }
+}
+
+@media screen and (max-device-width: 354.9px) {
+
+
+    .row {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .col-5 {
+        width: 400px;
+    }
+
+    iframe {
+        margin-top: 20px;
+        width: 200px;
+        height: 120px;
+
+    }
+
+    .maps {
+        display:flex;
+        justify-content: center;
+    }
+
+    .jurusan {
+        font-size: 10px;
+        width: 220px;
+        font-weight: 800;
+        text-align: center;
+
 
     }
 
     .address {
         font-size: 7px;
-        width: 100px;
-        text-align: center;
+        width: 180px;
+        display: flex;
+        justify-content: center;
+        margin-top: 0px;
+    }
+
+    .logo-mob {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .footer-logo {
-        margin: 5px 32px;
         width: 75px;
         height: 70px;
+        margin: 20px 80px;
 
     }
 
@@ -301,7 +440,6 @@ iframe {
         height: 18px;
         width: 18px;
         border-radius: 50%;
-        margin: 0px 4px;
     }
 
     .icon-background3 {
@@ -318,102 +456,21 @@ iframe {
         height: 18px;
         width: 18px;
         border-radius: 50%;
-        margin: 0px 4px;
     }
 
     .icon {
         position: absolute;
         top: -3px;
-        left: 3px;
+        left: 4px;
     }
 
     .sosmed {
-        margin: 0px 0px 0px 20px;
+        justify-content: center;
+        width: 180px;
+        margin: 0px 16px;
     }
 
     iconify-icon {
-        width: 12px;
-    }
-}
-
-@media screen and (max-device-width: 319.9px) {
-
-    .row {
-        margin: 0px 10px 0px 0px;
-    }
-
-    iframe {
-        width: 140px;
-        height: 100px;
-    }
-
-    .jurusan {
-        font-size: 7px;
-        font-weight: 600;
-        text-align: center;
-        width: 80px;
-
-    }
-
-    .address {
-        font-size: 4px;
-        width: 50px;
-        text-align: center;
-    }
-
-    .footer-logo {
-        margin: 5px 25px;
-        width: 35px;
-        height: 30px;
-
-    }
-
-    .icon-background {
-        position: relative;
-        background-color: #FF0000;
-        height: 13px;
-        width: 12px;
-        border-radius: 50%;
-    }
-
-
-    .icon-background2 {
-        position: relative;
-        background-color: #E1306C;
-        height: 13px;
-        width: 12px;
-        border-radius: 50%;
-        margin: 0px 2px;
-    }
-
-    .icon-background3 {
-        position: relative;
-        background-color: #4267B2;
-        height: 13px;
-        width: 12px;
-        border-radius: 50%;
-    }
-
-    .icon-background4 {
-        position: relative;
-        background-color: #25D366;
-        height: 13px;
-        width: 12px;
-        border-radius: 50%;
-        margin: 0px 2px;
-    }
-
-    .icon {
-        position: absolute;
-        top: -6px;
-        left: 2px;
-    }
-
-    .sosmed {
-        margin: 0px 0px 0px 15px;
-    }
-
-    iconify-icon {
-        width: 8px;
+        width: 10px;
     }
 }
