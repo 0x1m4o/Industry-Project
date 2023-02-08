@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 class ProgramController extends Controller
 {
     public function index() {
-        return view('program.index', [
+        return view('user.program', [
             'title' => 'Program',
             'program' => Program::all()
         ]); 
