@@ -53,7 +53,7 @@
 
 
     {{-- Footer --}}
-    {{-- @include('partials.footer') --}}
+    @include('partials.footer')
 
     {{-- Dropdown JS --}}
     <script src="/js/dropdown.js"></script>

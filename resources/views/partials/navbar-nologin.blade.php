@@ -2,7 +2,7 @@
 
 {{-- Navbar Before Login --}}
 <div class="nav-wrapper">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white bg-body-tertiary">
         <div class="container-fluid">
             <img src="/img/itc.png" alt="Logo" width="80" height="65" class="d-flex align-items-center" />
             <div class="nav-icons">
@@ -50,7 +50,7 @@
                 <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
                     href="/signup">Daftar</a>
             </div>
 

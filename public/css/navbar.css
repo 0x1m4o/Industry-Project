@@ -122,11 +122,20 @@
 
 .dropdown-menu-center {
     right: auto !important;
-    left: 55% !important;
+    left: 52% !important;
     top: 120% !important;
-    -webkit-transform: translate(-53%, 0) !important;
-    -o-transform: translate(-53%, 0) !important;
-    transform: translate(-53%, 0) !important;
+    -webkit-transform: translate(-45%, 0) !important;
+    -o-transform: translate(-45%, 0) !important;
+    transform: translate(-45%, 0) !important;
+}
+
+.dropdown-menu-start {
+    right: auto !important;
+    left: 50% !important;
+    top: 120% !important;
+    -webkit-transform: translate(-70%, 0) !important;
+    -o-transform: translate(-70%, 0) !important;
+    transform: translate(-70%, 0) !important;
 }
 
 .dropdown .dropdown-menu-profile {

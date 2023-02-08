@@ -7,7 +7,6 @@
 .jurusan {
     font-size: 20px;
     font-weight: 600;
-
 }
 
 .row {
@@ -25,17 +24,16 @@
 .icon-background {
     position: relative;
     display: flex;
-    background-color: #FF0000;
+    background-color: #ff0000;
     height: 47px;
     width: 47px;
     border-radius: 50%;
 }
 
-
 .icon-background2 {
     position: relative;
     display: flex;
-    background-color: #E1306C;
+    background-color: #e1306c;
     height: 47px;
     width: 47px;
     border-radius: 50%;
@@ -45,7 +43,7 @@
 .icon-background3 {
     position: relative;
     display: flex;
-    background-color: #4267B2;
+    background-color: #4267b2;
     height: 47px;
     width: 47px;
     border-radius: 50%;
@@ -54,7 +52,7 @@
 .icon-background4 {
     position: relative;
     display: flex;
-    background-color: #25D366;
+    background-color: #25d366;
     height: 47px;
     width: 47px;
     border-radius: 50%;
@@ -79,7 +77,6 @@ iframe {
     border-radius: 10px;
 }
 
-
 @media screen and (min-device-width: 992px) and (max-device-width: 1199.9px) {
     iframe {
         border-radius: 10px;
@@ -94,7 +91,6 @@ iframe {
         font-size: 17px;
         font-weight: 600;
         text-align: center;
-
     }
 
     .address {
@@ -122,7 +118,6 @@ iframe {
         font-size: 14px;
         font-weight: 600;
         text-align: center;
-
     }
 
     .address {
@@ -135,23 +130,21 @@ iframe {
         margin: 10px 80px;
         width: 75px;
         height: 70px;
-
     }
 
     .icon-background {
         position: relative;
         display: flex;
-        background-color: #FF0000;
+        background-color: #ff0000;
         height: 40px;
         width: 40px;
         border-radius: 50%;
     }
 
-
     .icon-background2 {
         position: relative;
         display: flex;
-        background-color: #E1306C;
+        background-color: #e1306c;
         height: 40px;
         width: 40px;
         border-radius: 50%;
@@ -161,7 +154,7 @@ iframe {
     .icon-background3 {
         position: relative;
         display: flex;
-        background-color: #4267B2;
+        background-color: #4267b2;
         height: 40px;
         width: 40px;
         border-radius: 50%;
@@ -170,7 +163,7 @@ iframe {
     .icon-background4 {
         position: relative;
         display: flex;
-        background-color: #25D366;
+        background-color: #25d366;
         height: 40px;
         width: 40px;
         border-radius: 50%;
@@ -199,7 +192,6 @@ iframe {
     .jurusan {
         font-size: 9px;
         font-weight: 600;
-
     }
 
     .address {
@@ -212,23 +204,21 @@ iframe {
         margin: 5px 40px;
         width: 75px;
         height: 70px;
-
     }
 
     .icon-background {
         position: relative;
         display: flex;
-        background-color: #FF0000;
+        background-color: #ff0000;
         height: 28px;
         width: 28px;
         border-radius: 50%;
     }
 
-
     .icon-background2 {
         position: relative;
         display: flex;
-        background-color: #E1306C;
+        background-color: #e1306c;
         height: 28px;
         width: 28px;
         border-radius: 50%;
@@ -238,7 +228,7 @@ iframe {
     .icon-background3 {
         position: relative;
         display: flex;
-        background-color: #4267B2;
+        background-color: #4267b2;
         height: 28px;
         width: 28px;
         border-radius: 50%;
@@ -247,7 +237,7 @@ iframe {
     .icon-background4 {
         position: relative;
         display: flex;
-        background-color: #25D366;
+        background-color: #25d366;
         height: 28px;
         width: 28px;
         border-radius: 50%;
@@ -271,8 +261,6 @@ iframe {
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 499.9px) {
-
-
     .row {
         flex-direction: column;
         display: flex;
@@ -287,11 +275,10 @@ iframe {
         margin-top: 20px;
         width: 200px;
         height: 120px;
-
     }
 
     .maps {
-        display:flex;
+        display: flex;
         justify-content: center;
     }
 
@@ -299,8 +286,6 @@ iframe {
         font-size: 13px;
         font-weight: 800;
         text-align: center;
-
-
     }
 
     .address {
@@ -316,21 +301,19 @@ iframe {
         width: 75px;
         height: 70px;
         margin: 20px 80px;
-
     }
 
     .icon-background {
         position: relative;
-        background-color: #FF0000;
+        background-color: #ff0000;
         height: 25px;
         width: 25px;
         border-radius: 50%;
     }
 
-
     .icon-background2 {
         position: relative;
-        background-color: #E1306C;
+        background-color: #e1306c;
         height: 25px;
         width: 25px;
         border-radius: 50%;
@@ -339,7 +322,7 @@ iframe {
 
     .icon-background3 {
         position: relative;
-        background-color: #4267B2;
+        background-color: #4267b2;
         height: 25px;
         width: 25px;
         border-radius: 50%;
@@ -347,7 +330,7 @@ iframe {
 
     .icon-background4 {
         position: relative;
-        background-color: #25D366;
+        background-color: #25d366;
         height: 25px;
         width: 25px;
         border-radius: 50%;
@@ -370,8 +353,6 @@ iframe {
 }
 
 @media screen and (max-device-width: 354.9px) {
-
-
     .row {
         flex-direction: column;
         display: flex;
@@ -386,11 +367,10 @@ iframe {
         margin-top: 20px;
         width: 200px;
         height: 120px;
-
     }
 
     .maps {
-        display:flex;
+        display: flex;
         justify-content: center;
     }
 
@@ -399,8 +379,6 @@ iframe {
         width: 220px;
         font-weight: 800;
         text-align: center;
-
-
     }
 
     .address {
@@ -422,21 +400,19 @@ iframe {
         width: 75px;
         height: 70px;
         margin: 20px 80px;
-
     }
 
     .icon-background {
         position: relative;
-        background-color: #FF0000;
+        background-color: #ff0000;
         height: 18px;
         width: 18px;
         border-radius: 50%;
     }
 
-
     .icon-background2 {
         position: relative;
-        background-color: #E1306C;
+        background-color: #e1306c;
         height: 18px;
         width: 18px;
         border-radius: 50%;
@@ -444,7 +420,7 @@ iframe {
 
     .icon-background3 {
         position: relative;
-        background-color: #4267B2;
+        background-color: #4267b2;
         height: 18px;
         width: 18px;
         border-radius: 50%;
@@ -452,7 +428,7 @@ iframe {
 
     .icon-background4 {
         position: relative;
-        background-color: #25D366;
+        background-color: #25d366;
         height: 18px;
         width: 18px;
         border-radius: 50%;
