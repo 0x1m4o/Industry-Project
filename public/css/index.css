@@ -45,3 +45,74 @@ input[type="color"]:focus,
 h5 {
     margin: 0;
 }
+
+.bg-1 {
+    background: url("../img/kelas-industri.jfif");
+}
+.bg-2 {
+    background: url("../img/itc2.jfif");
+}
+.bg-3 {
+    background: url("../img/itc3.jfif");
+}
+
+.carousel-img {
+    width: 100%;
+    height: 100vh;
+    filter: blur(4px);
+    -webkit-filter: blur(4px);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-caption {
+    top: 30%;
+    bottom: initial;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.caption-wrapper {
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+.program-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    color: #212529;
+}
+
+.program-title-h1 {
+    font-size: 80px;
+}
+
+.cssanimation,
+.cssanimation span {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+.cssanimation span {
+    display: inline-block;
+}
+
+.fadeInBottom {
+    animation-name: fadeInBottom;
+}
+@keyframes fadeInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.btn-lihat {
+    color: white;
+    font-size: 25px;
+}

@@ -2,8 +2,8 @@
 <link rel="stylesheet" href="/css/navbar.css">
 
 {{-- Navbar Before Login --}}
-<div class="nav-wrapper">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="nav-wrapper sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white">
         <div class="container-fluid">
             <div class="d-flex justify-content-start align-items-center">
                 <button class="nav-btn ham-btn navbar-toggler" type="button" data-bs-toggle="offcanvas"

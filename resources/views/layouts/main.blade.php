@@ -22,6 +22,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
+    {{-- Font Google Montserrat --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Poppins&display=swap"
+        rel="stylesheet">
+
     {{-- Bootstrap --}}
     @vite(['resources/js/app.js'])
 
@@ -44,8 +50,10 @@
 
     @yield('content')
 
+
+
     {{-- Footer --}}
-    @include('partials.footer')
+    {{-- @include('partials.footer') --}}
 
     {{-- Dropdown JS --}}
     <script src="/js/dropdown.js"></script>
