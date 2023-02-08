@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/partner.css">
 
-<h1 class="text-center mb-4 fw-bolder"> Partner </h1>
+<h1 class="text-center my-5 fw-bolder"> Partner </h1>
 
 <div class="container partner mb-5 grid">
         <div class="card d-flex justify-content-center">
@@ -25,7 +25,7 @@
 
         <div class="card d-flex justify-content-center">
             <div class="d-flex align-items-center img-center p-1">
-                <img class="card-img-top partner-logo" src="img/nasa.svg" alt="Card image cap">
+                <img class="card-img-top partner-logo" src="img/tesla.svg" alt="Card image cap">
             </div>
         </div>
 

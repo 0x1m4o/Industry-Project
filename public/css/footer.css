@@ -273,7 +273,7 @@ iframe {
 @media screen and (min-device-width: 320px) and (max-device-width: 499.9px) {
 
 
-    .row {
+    .row2 {
         flex-direction: column;
         display: flex;
         align-items: center;

@@ -1,0 +1,179 @@
+.pro-title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px
+}
+
+.pro-desc {
+    text-align: center;
+}
+
+.ilham {
+    width: 450px;
+    height: 250px;
+    border-radius: 10px;
+}
+
+
+.btn-kunjungi {
+    text-align: center;
+}
+
+.btn-to {
+    font-size: 16px;
+    font-weight: 1000;
+    margin-top: 5px;
+}
+
+.btn-kunjungi2 {
+    width: 120px;
+    height: 40px;
+}
+
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1399.9px) {
+    .ilham {
+        width: 350px;
+        height: 200px;
+    }
+
+    .pro-title {
+        font-size: 35px
+    }
+
+    .pro-desc {
+        font-size: 13px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-device-width: 992px) and (max-device-width: 1199.9px) {
+    .ilham {
+        margin-top: 30px;
+        width: 300px;
+        height: 170px;
+    }
+
+    .pro-title {
+        font-size: 25px
+    }
+
+    .pro-desc {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-device-width: 768px) and (max-device-width: 991.9px) {
+    .ilham {
+        margin-top: 30px;
+        width: 220px;
+        height: 150px;
+    }
+
+    .pro-title {
+        font-size: 20px
+    }
+
+    .pro-desc {
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .btn-kunjungi2 {
+        width: 100px;
+        height: 30px;
+    }
+
+    .btn-to {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-device-width: 500px) and (max-device-width: 767.9px) {
+
+    .row1 {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .ilham {
+        position: relative;
+        left: 80px;
+        width: 220px;
+        height: 150px;
+        margin: 30px 20px;
+    }
+
+    .pro-title {
+        font-size: 20px;
+        width: 400px;
+    }
+
+    .pro-desc {
+        font-size: 10px;
+        text-align: center;
+        width: 380px;
+    }
+
+    .btn-kunjungi {
+        width: 400px;
+    }
+
+    .btn-kunjungi2 {
+        width: 100px;
+        height: 35px;
+    }
+
+    .btn-to {
+        font-size: 11px;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 499.9px) {
+
+    .row1 {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .ilham {
+        position: relative;
+        left: 80px;
+        width: 200px;
+        height: 120px;
+        margin: 30px 20px;
+    }
+
+
+
+    .pro-title {
+        font-size: 15px;
+        width: 350px;
+        text-align: center;
+    }
+
+    .pro-desc {
+        font-size: 8px;
+        text-align: center;
+        margin: 0
+    }
+
+    .col-width {
+        width: 100%;
+
+    }
+
+    .btn-kunjungi {}
+
+    .btn-kunjungi2 {
+        width: 100px;
+        height: 35px;
+    }
+
+    .btn-to {
+        font-size: 11px;
+    }
+}
