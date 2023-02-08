@@ -16,13 +16,6 @@
     align-items: center;
 }
 
-.ham-btn,
-.btn-search {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .btn-log {
     display: flex;
     justify-content: center;
@@ -35,11 +28,15 @@
     line-height: 35px;
     letter-spacing: 0.04rem;
     border: 1px solid rgba(0, 0, 0, 0.397) !important;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 2px #2b2b2b35;
 }
 
 .btn-daftar {
     background: #187bcd !important;
     color: white !important;
+    transition: all 0.5s ease;
+    box-shadow: 2px 2px 2px #2b2b2b35;
 }
 
 .btn-search {
@@ -48,6 +45,7 @@
     display: flex;
     align-items: center;
     height: 41px;
+    box-shadow: 2px 2px 2px #2b2b2b35;
 }
 
 .search-bar {
@@ -98,6 +96,7 @@
     }
     .navbar-toggler,
     #btn-search {
+        width: 51px !important;
         height: 51px !important;
     }
 

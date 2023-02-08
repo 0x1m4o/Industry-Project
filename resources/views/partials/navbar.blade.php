@@ -3,27 +3,31 @@
 
 {{-- Navbar Before Login --}}
 <div class="nav-wrapper sticky-top">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-white">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-white">
         <div class="container-fluid">
             <div class="d-flex justify-content-start align-items-center">
                 <button class="nav-btn ham-btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                    <iconify-icon icon="icon-park:hamburger-button" style="color: gray;"></iconify-icon>
+                    <iconify-icon class="d-flex justify-content-center align-items-center"
+                        icon="icon-park:hamburger-button" style="color: gray;width: 25px"></iconify-icon>
                 </button>
                 <img src="/img/itc.png" alt="Logo" width="80" height="65"
                     class="d-flex align-items-center" />
 
             </div>
             <div class="nav-icons">
-                <button onclick="autofocus()" class="nav-btn navbar-toggler navbar-toggler-search mx-2 px-1 text-black"
-                    type="button" style="width: 30px; height: 30px" id="btn-search" data-bs-toggle="collapse"
+                <button onclick="autofocus()"
+                    class="nav-btn navbar-toggler navbar-toggler-search text-black d-flex justify-content-center align-items-center"
+                    type="button" style="width: 60px;" id="btn-search" data-bs-toggle="collapse"
                     data-bs-target="#navbarSearchContent" type="button" aria-expanded="false"
                     aria-controls="navbarSearchContent" aria-label="Toggle navigation">
-                    <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
+                    <iconify-icon class="d-flex justify-content-center align-items-center" icon="mingcute:search-3-line"
+                        style="color: gray;width: 35px"></iconify-icon>
                 </button>
                 <div class="dropdown">
-                    <a href="/profile"> <button class="nav-btn navbar-toggler mx-2 px-1 text-black" type="button"
-                            style="width: 30px; height: 30px" aria-expanded="false">
+                    <a href="/profile">
+                        <button class="border-0 mx-2 px-1" type="button"
+                            style="width: 30px;background: transparent; height: 30px" aria-expanded="false">
                             <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
                         </button>
                     </a>
@@ -59,12 +63,13 @@
             <div class="collapse navbar-collapse navbar-collapse-ham" id="navhambtn">
                 <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link mx-1 aktif" aria-current="page" href="#">
+                        <a class="nav-link mx-1 {{ $title === 'Homepage' ? 'aktif' : '' }}" aria-current="page"
+                            href="/">
                             <h5 class="m-0">Home</h5>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" href="#">
+                        <a class="nav-link mx-1 {{ $title === 'Program' ? 'aktif' : '' }}" href="/program">
                             <h5 class="m-0">Program</h5>
                         </a>
                     </li>
@@ -134,8 +139,10 @@
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
     aria-labelledby="offcanvasWithBothOptionsLabel" style="background-color: rgb(103, 100, 100); width: 70%">
     <div class="container d-flex mt-2 align-items-center ms-1">
-        <button class="nav-btn navbar-toggler d-inline-block" type="button" data-bs-dismiss="offcanvas">
-            <iconify-icon icon="maki:cross" width="30" height="30" style="color: rgb(91, 90, 90);">
+        <button class="nav-btn navbar-toggler" type="button" data-bs-dismiss="offcanvas"
+            style="width: 50px; height: 30px;">
+            <iconify-icon class="d-flex justify-content-center align-items-center" icon="maki:cross" width="30"
+                height="30" style="color: rgb(91, 90, 90);width: 50px; height: 30px;">
             </iconify-icon>
         </button>
         <img src="/img/itc.png" alt="Logo" width="85" height="65" class="d-inline-block " />

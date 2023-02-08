@@ -13,7 +13,8 @@
                     <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
                 </button>
                 <button class="nav-btn ham-btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    style="width: 30px; height: 30px" data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions">
                     <iconify-icon icon="icon-park:hamburger-button" style="color: gray;"></iconify-icon>
                 </button>
             </div>
@@ -50,7 +51,7 @@
                 <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
                     href="/register">Daftar</a>
             </div>
 

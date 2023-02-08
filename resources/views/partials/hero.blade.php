@@ -9,11 +9,11 @@
                 <div class="carousel-caption cssanimation sequence fadeInBottom d-none d-md-block w-50 m-auto">
                     <div class="carousel-wrap">
                         <h1 class="program-title program-title-h1">Programming</h1>
-                        <h4 class="program-title program-title-h4">Lorem ipsum dolor, sit amet consectetur
+                        <h5 class="program-title program-title-h4">Lorem ipsum dolor, sit amet consectetur
                             adipisicing
                             elit.
-                            Consectetur, officia necessitatibus.</h4>
-                        <button class="btn btn-outline-dark rounded-5 btn-lihat">Lihat
+                            Consectetur, officia necessitatibus.</h5>
+                        <button class="btn mt-3  btn-lihat">Lihat
                             Program</button>
                     </div>
                 </div>
@@ -26,9 +26,9 @@
                 <div class="carousel-caption cssanimation sequence fadeInBottom d-none d-md-block w-50 m-auto">
                     <div class="carousel-wrap">
                         <h1 class="program-title program-title-h1">Networking</h1>
-                        <h4 class="program-title program-title-h4">Lorem ipsum dolor sit, amet consectetur
-                            adipisicingelit.Nemo ea modi natus.</h4>
-                        <button class="btn btn-dark rounded-5 btn-lihat">Lihat
+                        <h5 class="program-title program-title-h4">Lorem ipsum dolor sit, amet consectetur
+                            adipisicingelit.Nemo ea modi natus.</h5>
+                        <button class="btn mt-3 btn-lihat">Lihat
                             Program</button>
                     </div>
 
@@ -43,13 +43,12 @@
                     <div class="carousel-wrap">
 
                         <h1 class="program-title program-title-h1">Design</h1>
-                        <h4 class="program-title program-title-h4">Lorem ipsum dolor sit amet, consectetur
+                        <h5 class="program-title program-title-h4">Lorem ipsum dolor sit amet, consectetur
                             adipisicing
                             elit.
-                            Nesciunt laboriosam molestiae iste optio, consectetur ratione impedit quidem.</h4>
-                        <button type="button" class="btn btn-dark border-0 rounded-5 btn-lihat">Lihat
+                            Nesciunt laboriosam molestiae iste optio, consectetur ratione impedit quidem.</h5>
+                        <button type="button" class="btn mt-3  btn-lihat">Lihat
                             Program</button>
-
                     </div>
                 </div>
             </div>
