@@ -26,7 +26,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" href="#">
+                        <a class="nav-link mx-1" href="/program">
                             <h5 class="m-0">Program</h5>
                         </a>
                     </li>
