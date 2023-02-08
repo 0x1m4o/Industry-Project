@@ -21,10 +21,40 @@
                     aria-controls="navbarSearchContent" aria-label="Toggle navigation">
                     <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
                 </button>
-                <a href="/profile" class="d-flex align-items-center justify-content-center a-tag " id="profile-btn-tog">
-                    <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
-                    <h5 class="profile-title-tog m-0 ms-2">Badzlan</h5>
-                </a>
+                <div class="dropdown">
+                    <a href="/profile"> <button class="nav-btn navbar-toggler mx-2 px-1 text-black" type="button"
+                            style="width: 30px; height: 30px" aria-expanded="false">
+                            <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
+                        </button>
+                    </a>
+                    <div class="dropdown-menu box dropdown-menu-start dropdown-menu-profile py-2">
+                        <div class="drop-wrapper p-1 px-2">
+                            <a class="a-tag item-drop" href="/profile">
+                                <div class="item-profile py-2 go-profile">
+                                    <iconify-icon class="ms-1" icon="ic:baseline-person" width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Profil</h5>
+                                </div>
+                            </a>
+                            <a class="a-tag item-drop" href="/program">
+                                <div class="item-profile py-2 go-program">
+                                    <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Program</h5>
+                                </div>
+                            </a>
+                            <hr class="my-2" style="border: 1px solid black;">
+                            <a class="a-tag item-drop" href="/logout">
+                                <div class="item-profile py-2 go-logout">
+                                    <iconify-icon class="ms-1" icon="ic:round-exit-to-app" rotate="180deg"
+                                        width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Log Out</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-ham" id="navhambtn">
                 <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0">
@@ -60,7 +90,7 @@
                             <a href="/profile" class="d-flex align-items-center justify-content-center a-tag"
                                 role="button" aria-expanded="false">
                                 <img class="profile-pict" src="/img/itc.png" alt="">
-                                <h5 class="profile-title m-0 ms-2">{{ explode(" ", auth()->user()->name)[0] }}</h5>
+                                <h5 class="profile-title m-0 ms-2">{{ explode(' ', auth()->user()->name)[0] }}</h5>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-center dropdown-menu-profile py-2">
                                 <div class="drop-wrapper p-1 px-2">
@@ -73,7 +103,8 @@
                                     </a>
                                     <a class="a-tag item-drop" href="/program">
                                         <div class="item-profile py-2 go-program">
-                                            <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
+                                            <iconify-icon class="ms-1" icon="game-icons:graduate-cap"
+                                                width="25px">
                                             </iconify-icon>
                                             <h5>Program</h5>
                                         </div>
