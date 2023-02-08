@@ -51,7 +51,7 @@
                     href="/login">Masuk</a>
 
                 <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
-                    href="/signup">Daftar</a>
+                    href="/register">Daftar</a>
             </div>
 
         </div>
