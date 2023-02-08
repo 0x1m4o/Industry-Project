@@ -2,7 +2,7 @@
 
 {{-- Navbar Before Login --}}
 <div class="nav-wrapper">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white bg-body-tertiary">
         <div class="container-fluid">
             <img src="/img/itc.png" alt="Logo" width="80" height="65" class="d-flex align-items-center" />
             <div class="nav-icons">
@@ -13,7 +13,8 @@
                     <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
                 </button>
                 <button class="nav-btn ham-btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                    style="width: 30px; height: 30px" data-bs-target="#offcanvasWithBothOptions"
+                    aria-controls="offcanvasWithBothOptions">
                     <iconify-icon icon="icon-park:hamburger-button" style="color: gray;"></iconify-icon>
                 </button>
             </div>
@@ -25,7 +26,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" href="#">
+                        <a class="nav-link mx-1" href="/program">
                             <h5 class="m-0">Program</h5>
                         </a>
                     </li>
@@ -50,8 +51,8 @@
                 <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
-                    href="/signup">Daftar</a>
+                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                    href="/register">Daftar</a>
             </div>
 
         </div>

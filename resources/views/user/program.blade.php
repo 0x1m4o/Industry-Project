@@ -10,6 +10,5 @@
 
 {{-- Program --}}
 {{-- Isi Di bawah ini --}}
-@include('partials.program')
-
+    @include('partials.program')
 @endsection

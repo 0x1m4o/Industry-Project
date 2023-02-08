@@ -2,39 +2,74 @@
 <link rel="stylesheet" href="/css/navbar.css">
 
 {{-- Navbar Before Login --}}
-<div class="nav-wrapper">
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+<div class="nav-wrapper sticky-top">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top bg-white">
         <div class="container-fluid">
             <div class="d-flex justify-content-start align-items-center">
                 <button class="nav-btn ham-btn navbar-toggler" type="button" data-bs-toggle="offcanvas"
                     data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
-                    <iconify-icon icon="icon-park:hamburger-button" style="color: gray;"></iconify-icon>
+                    <iconify-icon class="d-flex justify-content-center align-items-center"
+                        icon="icon-park:hamburger-button" style="color: gray;width: 25px"></iconify-icon>
                 </button>
                 <img src="/img/itc.png" alt="Logo" width="80" height="65"
                     class="d-flex align-items-center" />
 
             </div>
             <div class="nav-icons">
-                <button onclick="autofocus()" class="nav-btn navbar-toggler navbar-toggler-search mx-2 px-1 text-black"
-                    type="button" style="width: 30px; height: 30px" id="btn-search" data-bs-toggle="collapse"
+                <button onclick="autofocus()"
+                    class="nav-btn navbar-toggler navbar-toggler-search text-black d-flex justify-content-center align-items-center"
+                    type="button" style="width: 60px;" id="btn-search" data-bs-toggle="collapse"
                     data-bs-target="#navbarSearchContent" type="button" aria-expanded="false"
                     aria-controls="navbarSearchContent" aria-label="Toggle navigation">
-                    <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
+                    <iconify-icon class="d-flex justify-content-center align-items-center" icon="mingcute:search-3-line"
+                        style="color: gray;width: 35px"></iconify-icon>
                 </button>
-                <a href="/profile" class="d-flex align-items-center justify-content-center a-tag " id="profile-btn-tog">
-                    <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
-                    <h5 class="profile-title-tog m-0 ms-2">Badzlan</h5>
-                </a>
+                <div class="dropdown">
+                    <a href="/profile">
+                        <button class="border-0 mx-2 px-1" type="button"
+                            style="width: 30px;background: transparent; height: 30px" aria-expanded="false">
+                            <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
+                        </button>
+                    </a>
+                    <div class="dropdown-menu box dropdown-menu-start dropdown-menu-profile py-2">
+                        <div class="drop-wrapper p-1 px-2">
+                            <a class="a-tag item-drop" href="/profile">
+                                <div class="item-profile py-2 go-profile">
+                                    <iconify-icon class="ms-1" icon="ic:baseline-person" width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Profil</h5>
+                                </div>
+                            </a>
+                            <a class="a-tag item-drop" href="/program">
+                                <div class="item-profile py-2 go-program">
+                                    <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Program</h5>
+                                </div>
+                            </a>
+                            <hr class="my-2" style="border: 1px solid black;">
+                            <a class="a-tag item-drop" href="/logout">
+                                <div class="item-profile py-2 go-logout">
+                                    <iconify-icon class="ms-1" icon="ic:round-exit-to-app" rotate="180deg"
+                                        width="25px">
+                                    </iconify-icon>
+                                    <h5 class="ps-2">Log Out</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="collapse navbar-collapse navbar-collapse-ham" id="navhambtn">
                 <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link mx-1 aktif" aria-current="page" href="#">
+                        <a class="nav-link mx-1 {{ $title === 'Homepage' ? 'aktif' : '' }}" aria-current="page"
+                            href="/">
                             <h5 class="m-0">Home</h5>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" href="#">
+                        <a class="nav-link mx-1 {{ $title === 'Program' ? 'aktif' : '' }}" href="/program">
                             <h5 class="m-0">Program</h5>
                         </a>
                     </li>
@@ -60,7 +95,7 @@
                             <a href="/profile" class="d-flex align-items-center justify-content-center a-tag"
                                 role="button" aria-expanded="false">
                                 <img class="profile-pict" src="/img/itc.png" alt="">
-                                <h5 class="profile-title m-0 ms-2">{{ explode(" ", auth()->user()->name)[0] }}</h5>
+                                <h5 class="profile-title m-0 ms-2">{{ explode(' ', auth()->user()->name)[0] }}</h5>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-center dropdown-menu-profile py-2">
                                 <div class="drop-wrapper p-1 px-2">
@@ -73,7 +108,8 @@
                                     </a>
                                     <a class="a-tag item-drop" href="/program">
                                         <div class="item-profile py-2 go-program">
-                                            <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
+                                            <iconify-icon class="ms-1" icon="game-icons:graduate-cap"
+                                                width="25px">
                                             </iconify-icon>
                                             <h5>Program</h5>
                                         </div>
@@ -103,8 +139,10 @@
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
     aria-labelledby="offcanvasWithBothOptionsLabel" style="background-color: rgb(103, 100, 100); width: 70%">
     <div class="container d-flex mt-2 align-items-center ms-1">
-        <button class="nav-btn navbar-toggler d-inline-block" type="button" data-bs-dismiss="offcanvas">
-            <iconify-icon icon="maki:cross" width="30" height="30" style="color: rgb(91, 90, 90);">
+        <button class="nav-btn navbar-toggler" type="button" data-bs-dismiss="offcanvas"
+            style="width: 50px; height: 30px;">
+            <iconify-icon class="d-flex justify-content-center align-items-center" icon="maki:cross" width="30"
+                height="30" style="color: rgb(91, 90, 90);width: 50px; height: 30px;">
             </iconify-icon>
         </button>
         <img src="/img/itc.png" alt="Logo" width="85" height="65" class="d-inline-block " />
