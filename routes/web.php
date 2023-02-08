@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\ForgotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,15 +17,14 @@ use App\Http\Controllers\Auth\RegisterController;
 |
 */
 
+// User
 Route::get('/', function () {
-    return view('user.landing', [
-        'title' => "Landing",
+    return view('user.home', [
+        'title' => "Homepage",
     ]);
 });
 
-
-
-Route::middleware(['guest:web'])->group(function () {
+Route::middleware(['guest'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
@@ -37,13 +37,13 @@ Route::middleware(['guest:web'])->group(function () {
 // Logout
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+// Forgot Password
+Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
+
+// Reset Password
+Route::get('/reset-password', [ForgotController::class, 'reset'])->name('password.reset');
+
+
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-
-
-// User
-Route::get('/user/home', function () {
-    return view('user.home', [
-        'title' => "Homepage",
-    ]);
-});
+Route::get('/program/{programs:slug}', [ProgramController::class, 'show']);
