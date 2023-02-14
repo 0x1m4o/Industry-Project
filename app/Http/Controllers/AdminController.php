@@ -39,7 +39,17 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'gambar' => 'required',
+            'nama' => 'required',
+            'slug' => 'required',
+            'category' => 'required',
+            'deskripsi' => 'required'
+        ]);
+
+        Program::create($request->all());
+
+        return redirect()->back()->with('success', 'Berhasil Membuat Program');
     }
 
     /**
@@ -48,9 +58,12 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Program $programs)
     {
-        //
+        return view('program.show', [
+            'title' => 'Program',
+            'programs' => $programs
+        ]);
     }
 
     /**
@@ -61,7 +74,7 @@ class AdminController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('program.edit', compact('programs'));
     }
 
     /**
@@ -71,9 +84,19 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Program $programs)
     {
-        //
+        $request->validate([
+            'gambar' => 'required',
+            'nama' => 'required',
+            'slug' => 'required',
+            'category' => 'required',
+            'deskripsi' => 'required'
+        ]);
+
+        $programs->update($request->all());
+
+        return redirect()->back()->with('success', 'Berhasil Update Program');
     }
 
     /**
@@ -82,8 +105,10 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Program $programs)
     {
-        //
+        $programs->delete();
+
+        return redirect()->back()->with('success', 'Berhasil Hapus Program');
     }
 }
