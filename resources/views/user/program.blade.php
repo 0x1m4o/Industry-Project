@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-{{-- JANGAN DIHAPUS GAES --}}
+{{-- JANGAN DIHAPUS --}}
     {{-- @foreach ($program as $data) --}}
         {{-- <a href="/program/{{$data->slug}}">{{$data->nama}}</a> --}}
         {{-- <p><i class='bx bxs-category'></i> {{$data->category}}</p> --}}
