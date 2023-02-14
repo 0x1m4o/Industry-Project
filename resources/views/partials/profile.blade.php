@@ -2,7 +2,7 @@
 <div class="container">
     <div class="row row1 my-5">
         <div class="col-5">
-            <img class="ilham" src="img/ilham3.png" alt="">
+            <img class="ilham" src="/img/programmings.jpg" alt="">
 
         </div>
 

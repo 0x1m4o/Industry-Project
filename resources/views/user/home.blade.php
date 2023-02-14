@@ -6,6 +6,4 @@
     @include("partials.profile")
 
     @include("partials.partner")
-
-    @include('partials.partner')
 @endsection
