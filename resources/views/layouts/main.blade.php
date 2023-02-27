@@ -37,6 +37,8 @@
     {{-- Icon --}}
     <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
 
+    {{-- Boxicons --}}
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
