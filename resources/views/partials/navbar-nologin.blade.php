@@ -21,12 +21,12 @@
             <div class="collapse navbar-collapse navbar-collapse-ham" id="navhambtn">
                 <ul class="navbar-nav me-auto ms-3 mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link mx-1 aktif" aria-current="page" href="#">
+                        <a class="nav-link mx-1 {{ $title == 'Homepage' ? 'aktif' : '' }}" aria-current="page" href="/">
                             <h5 class="m-0">Home</h5>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link mx-1" href="/program">
+                        <a class="nav-link mx-1 {{ $title == 'Program' ? 'aktif' : '' }}" href="/program">
                             <h5 class="m-0">Program</h5>
                         </a>
                     </li>
