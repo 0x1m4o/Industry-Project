@@ -9,14 +9,16 @@ use App\Http\Controllers\Controller;
 class ProgramController extends Controller
 {
     public function index() {
-        return view('user.program', [
-            'title' => 'Program',
-            'program' => Program::all()
-        ]); 
+        // return view('user.program', [
+        //     'title' => 'Program',
+        //     'program' => Program::all()
+        // ]); 
+        $programs = Program::all();
+        return view('admin.programs.index', compact('programs'));
     }
 
     public function create() {
-        return view('program.create');
+        return view('admin.programs.create');
     }
 
     public function store(Request $request) {

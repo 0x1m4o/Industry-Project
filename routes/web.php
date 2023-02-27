@@ -19,11 +19,11 @@ use App\Http\Controllers\Auth\ForgotController;
 */
 
 // User
-Route::get('/', function () {
-    return view('user.home', [
-        'title' => "Homepage",
-    ]);
-});
+// Route::get('/', function () {
+//     return view('user.home', [
+//         'title' => "Homepage",
+//     ]);
+// });
 
 Route::middleware(['guest'])->group(function () {
     // Login
@@ -46,10 +46,10 @@ Route::get('/reset-password', [ForgotController::class, 'reset'])->name('passwor
 
 
 // Program
-Route::get('/program', [ProgramController::class, 'index']);
-Route::get('/program/{programs:slug}', [ProgramController::class, 'show']);
+Route::get('/program', [AdminController::class, 'index']);
+Route::get('/program/{programs:slug}', [AdminController::class, 'show']);
 
 // Admin
 // Route::resource('admin', AdminController::class);
 
-Route::resource('admin', AdminController::class);
+Route::resource('admin/program', AdminController::class);

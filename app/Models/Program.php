@@ -7,23 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Program extends Model
 {
-    // use HasFactory;
-    public $fillable = ['nama', 'gambar', 'slug', 'deskripsi'];
-    protected $guarded = [
-        'id'
+    use HasFactory;
+
+    protected $fillable = [
+        'gambar', 'nama', 'category', 'deskripsi'
     ];
-
-    public function category() {
-        return $this->belongsTo(Category::class);
-    }
-    // private static $program = [
-    //     [
-    //         'nama'=> 'Judul Pertama',
-    //         'blog' => 'Blog Pertama'
-    //     ],
-    // ];
-
-    // public static function index() {
-    //     return self::$program;
-    // }
-};
+}

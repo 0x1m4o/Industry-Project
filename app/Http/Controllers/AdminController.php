@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Program;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
 {
@@ -15,10 +16,12 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.programs.index', [
-            'title' => 'Program',
-            'program' => Program::all()
-        ]);
+        // return view('user.program', [
+        //     'title' => 'Program',
+        //     'program' => Program::all()
+        // ]); 
+        $programs = Program::all();
+        return view('admin.programs.index', compact('programs'));
     }
 
     /**
@@ -38,33 +41,33 @@ class AdminController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        $request->validate([
-            'gambar' => 'required',
-            'nama' => 'required',
-            'slug' => 'required',
-            'category' => 'required',
-            'deskripsi' => 'required'
-        ]);
+{
+    $this->validate($request, [
+        'gambar'     => 'required|image|mimes:png,jpg,jpeg',
+        'nama'     => 'required',
+        'category'   => 'required',
+        'deskripsi'   => 'required'
+    ]);
 
-        Program::create($request->all());
+    //upload image
+    $gambar = $request->file('gambar');
+    $gambar->storeAs('public/programs', $gambar->hashName());
 
-        return redirect()->back()->with('success', 'Berhasil Membuat Program');
+    $blog = Program::create([
+        'gambar'     => $gambar->hashName(),
+        'nama'     => $request->nama,
+        'category'   => $request->category,
+        'deskripsi'   => $request->deskripsi
+    ]);
+
+    if($blog){
+        //redirect dengan pesan sukses
+        return redirect()->route('program.index')->with(['success' => 'Data Program Berhasil Disimpan!']);
+    }else{
+        //redirect dengan pesan error
+        return redirect()->route('program.index')->with(['error' => 'Data Program Gagal Disimpan!']);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Program $programs)
-    {
-        return view('program.show', [
-            'title' => 'Program',
-            'programs' => $programs
-        ]);
-    }
+}
 
     /**
      * Show the form for editing the specified resource.
@@ -72,9 +75,9 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Program $program)
     {
-        return view('program.edit', compact('programs'));
+        return view('admin.programs.edit', compact('program'));
     }
 
     /**
@@ -84,19 +87,50 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Program $programs)
+    public function update(Request $request, Program $program)
     {
-        $request->validate([
-            'gambar' => 'required',
-            'nama' => 'required',
-            'slug' => 'required',
-            'category' => 'required',
-            'deskripsi' => 'required'
+        $this->validate($request, [
+            'nama'     => 'required',
+            'category'   => 'required',
+            'deskripsi'   => 'required'
         ]);
 
-        $programs->update($request->all());
+        //get data Blog by ID
+        $program = Program::findOrFail($program->id);
 
-        return redirect()->back()->with('success', 'Berhasil Update Program');
+        if($request->file('gambar') == "") {
+
+            $program->update([
+                'nama'     => $request->nama,
+                'category'   => $request->category,
+                'deskripsi'   => $request->deskripsi,
+            ]);
+
+        } else {
+
+            //hapus old image
+            Storage::disk('local')->delete('public/programs/'.$program->gambar);
+
+            //upload new image
+            $gambar = $request->file('gambar');
+            $gambar->storeAs('public/programs', $gambar->hashName());
+
+            $program->update([
+                'gambar'     => $gambar->hashName(),
+                'nama'     => $request->nama,
+                'category'   => $request->category,
+                'deskriosi'   => $request->deskripsi,
+            ]);
+
+        }
+
+        if($program){
+            //redirect dengan pesan sukses
+            return redirect()->route('program.index')->with(['success' => 'Data Program Berhasil Diupdate!']);
+        }else{
+            //redirect dengan pesan error
+            return redirect()->route('program.index')->with(['error' => 'Data Program Gagal Diupdate!']);
+        }
     }
 
     /**
@@ -105,10 +139,18 @@ class AdminController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Program $programs)
+    public function destroy($id)
     {
-        $programs->delete();
+    $program = Program::findOrFail($id);
+    Storage::disk('local')->delete('public/programs/'.$program->gambar);
+    $program->delete();
 
-        return redirect()->back()->with('success', 'Berhasil Hapus Program');
+    if($program){
+        //redirect dengan pesan sukses
+        return redirect()->route('program.index')->with(['success' => 'Data Program Berhasil Dihapus!']);
+    }else{
+        //redirect dengan pesan error
+        return redirect()->route('program.index')->with(['error' => 'Data Program Gagal Dihapus!']);
+    }
     }
 }
