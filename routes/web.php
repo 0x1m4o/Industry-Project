@@ -47,6 +47,7 @@ Route::get('/reset-password', [ForgotController::class, 'reset'])->name('passwor
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
+Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
 
 // Admin
 // Route::resource('admin', AdminController::class);

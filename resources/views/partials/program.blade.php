@@ -37,7 +37,7 @@
                     </div>
                     <p class="mt-3">{!! substr($program->deskripsi, 0, 100) !!} ...</p>
                     <div class="d-flex justify-content-end">
-                        <a href="" role="button" class="btn btn-primary">Lihat Selengkapnya</a>
+                        <a href="{{ route('user.show', $program->id) }}" role="button" class="btn btn-primary">Lihat Selengkapnya</a>
                     </div>
                 </div>
             </a>
