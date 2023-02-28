@@ -29,7 +29,7 @@
             <a href="{{ route('user.show', $program->id) }}">
                 <div class="border rounded-3 p-3 mt-3">
                     <div class="d-flex align-items-start gap-3">
-                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="150" class="rounded">
+                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="160" height="110" class="rounded">
                         <div>
                             <h4>{{$program->nama}}</h4>
                             <div class="d-flex gap-2 align-items-center">
