@@ -9,7 +9,7 @@
       <div class="col-md-8">
         <div class="card-body">
           <h5 class="card-title" style="font-weight: bold;">{{$programs->nama}}</h5>
-          <p class="card-text d-flex"><i class='bx bxs-category align-items-center px-1' style="font-size: 20px;"></i> {{$programs->category}}</p>
+          <p class="card-text d-flex"><i class='bx bxs-category align-items-center' style="font-size: 20px; padding-right: 5px;"></i> {{$programs->category}}</p>
           <p class="card-text">{!! $programs->deskripsi !!}</p>
           <a href="#" class="btn btn-primary">Daftar Sekarang</a>
         </div>
