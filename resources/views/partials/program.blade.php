@@ -21,11 +21,11 @@
 
 <div class="container p-0" style="margin-top: 100px;">
     <div class="row m-0 w-full g-2">
+        @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">
             <a href="">
-                <div class="border rounded-3 p-3">
+                <div class="border rounded-3 p-3 mt-3">
                     <div class="d-flex align-items-start gap-3">
-                        @forelse ($programs as $program)
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="150" class="rounded">
                         <div>
                             <h4>{{$program->nama}}</h4>
@@ -39,13 +39,13 @@
                     <div class="d-flex justify-content-end">
                         <a href="" role="button" class="btn btn-primary">Lihat Selengkapnya</a>
                     </div>
-                    @empty
-                        <div class="alert alert-danger">
-                            Data Program belum Tersedia.
-                        </div>
-                    @endforelse
                 </div>
             </a>
         </div>
+        @empty
+        <div class="alert alert-danger">
+            Data Program belum Tersedia.
+        </div>
+        @endforelse
     </div>
 </div>
