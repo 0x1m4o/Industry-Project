@@ -1,11 +1,11 @@
 <!-- {Links} -->
 
-<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="/css/footer.css">
 <div class="container">
     <hr>
     <div class="row2 d-flex">
         <div class="col-5 p-0 logo-mob">
-            <img src="img/itc.png" alt="" class="footer-logo">
+            <img src="/img/itc.png" alt="" class="footer-logo">
             <h4 class="jurusan">Information And Technology Club</h4>
             <p class="text-center address ms-3 mt-3">Jl. Swadaya, RT.7/RW.7, Jatinegara,
                 Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13930</p>
@@ -14,22 +14,27 @@
             <div class="sosmed">
                 <div class="icon-background">
                     <div>
-                        <iconify-icon icon="bi:youtube" style="color: white;" width="25" class="icon">
-                        </iconify-icon>
+                        <a href="https://www.youtube.com/@smkn69jakarta25" target="_blank">
+                            <iconify-icon icon="bi:youtube" style="color: white;" width="25" class="icon">
+                            </iconify-icon>
+                        </a>
                     </div>
                 </div>
 
                 <div class="icon-background2">
                     <div>
-                        <iconify-icon icon="uil:instagram" style="color: white;" width="25" class="icon">
-                        </iconify-icon>
+                        <a href="https://www.instagram.com/itcsmkn69jkt" target="_blank">
+                            <iconify-icon icon="uil:instagram" style="color: white;" width="25" class="icon">
+                            </iconify-icon>
+                        </a>
                     </div>
                 </div>
 
                 <div class="icon-background3">
                     <div>
-                        <iconify-icon icon="ri:facebook-fill" style="color: white;" width="25" class="icon">
-                        </iconify-icon>
+                        <a href="https://www.smkn69jkt.sch.id/" target="_blank">
+                        <iconify-icon icon="clarity:world-line" style="color: white" width="25" class="icon"></iconify-icon>
+                        </a>
                     </div>
                 </div>
 

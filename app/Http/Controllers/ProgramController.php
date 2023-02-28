@@ -20,11 +20,11 @@ class ProgramController extends Controller
         ]);
     }
 
-    public function show($id, Program $program) {
+    public function show($id, Program $programs) {
         $programs = Program::where('id', $id)->first();
         return view('user.show_program', [
             'title' => $programs->nama,
-            'programs' => $program
+            'programs' => $programs
         ]); 
     }
 
