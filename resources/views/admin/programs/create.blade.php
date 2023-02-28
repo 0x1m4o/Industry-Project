@@ -67,8 +67,8 @@
                                 @enderror
                             </div>
 
-                            <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-                            <button type="reset" class="btn btn-md btn-warning">RESET</button>
+                            <button type="submit" class="btn btn-md btn-primary text-end">Save</button>
+                            <a href="/admin/program" class="btn btn-md btn-warning" role="button">Back</a>
 
                         </form> 
                     </div>
