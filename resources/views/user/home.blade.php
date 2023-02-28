@@ -3,6 +3,7 @@
 @section('content')
 @include('partials.hero')
 
-@include("partials.profile")
-@include("partials.partner")
+    @include("partials.profile")
+
+    @include("partials.partner")
 @endsection

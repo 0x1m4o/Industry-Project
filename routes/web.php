@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\Auth\LoginController;
@@ -46,4 +47,9 @@ Route::get('/reset-password', [ForgotController::class, 'reset'])->name('passwor
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-Route::get('/program/{programs:slug}', [ProgramController::class, 'show']);
+Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
+
+// Admin
+// Route::resource('admin', AdminController::class);
+
+Route::resource('admin/program', AdminController::class);

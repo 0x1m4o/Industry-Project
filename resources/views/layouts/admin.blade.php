@@ -30,7 +30,6 @@
 
     {{-- Bootstrap --}}
     @vite(['resources/js/app.js'])
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     {{-- Custom CSS --}}
     <link rel="stylesheet" href="/css/index.css">
@@ -38,25 +37,23 @@
     {{-- Icon --}}
     <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
 
-    {{-- Boxicons --}}
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 
 <body>
     <script src="https://kit.fontawesome.com/457a315592.js" crossorigin="anonymous"></script>
     <!-- Navbar -->
-    @auth
+    {{-- @auth
         @include('partials.navbar')
     @else
         @include('partials.navbar-nologin')
-    @endauth
+    @endauth --}}
 
     @yield('content')
 
 
 
     {{-- Footer --}}
-    @include('partials.footer')
+    {{-- @include('partials.footer') --}}
 
     {{-- Dropdown JS --}}
     <script src="/js/dropdown.js"></script>

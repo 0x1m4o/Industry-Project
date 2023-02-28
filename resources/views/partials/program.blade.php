@@ -19,109 +19,33 @@
 </style>
 
 
-<div class="container mt-5 p-0">
+<div class="container p-0" style="margin-top: 100px;">
     <div class="row m-0 w-full g-2">
+        @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">
             <a href="">
-                <div class="border rounded-3 p-3">
+                <div class="border rounded-3 p-3 mt-3">
                     <div class="d-flex align-items-start gap-3">
-                        <img src="/img/networking.jpg" width="150" class="rounded">
+                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="150" class="rounded">
                         <div>
-                            <h4>System Administration</h4>
+                            <h4>{{$program->nama}}</h4>
                             <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="mdi:local-area-network" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Networking</span>
+                                <i class='bx bxs-category' style="font-size: 20px;"></i>
+                                <span>{{$program->category}}</span>
                             </div>
                         </div>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="">
-                <div class="border rounded-3 p-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="/img/programming.jpg" width="150" class="rounded">
-                        <div>
-                            <h4>Web Development</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="fa6-solid:laptop-code" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Programming</span>
-                            </div>
-                        </div>
+                    <p class="mt-3">{!! substr($program->deskripsi, 0, 100) !!} ...</p>
+                    <div class="d-flex justify-content-end">
+                        <a href="{{ route('user.show', $program->id) }}" role="button" class="btn btn-primary">Lihat Selengkapnya</a>
                     </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
                 </div>
             </a>
         </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="">
-                <div class="border rounded-3 p-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="/img/design.jpg" width="150" class="rounded">
-                        <div>
-                            <h4>UI/UX Design</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="iconoir:design-pencil" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Design</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
-                </div>
-            </a>
+        @empty
+        <div class="alert alert-danger">
+            Data Program belum Tersedia.
         </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="">
-                <div class="border rounded-3 p-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="/img/networking.jpg" width="150" class="rounded">
-                        <div>
-                            <h4>Cisco</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="mdi:local-area-network" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Networking</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="">
-                <div class="border rounded-3 p-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="/img/programming.jpg" width="150" class="rounded">
-                        <div>
-                            <h4>Android Development</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="fa6-solid:laptop-code" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Programming</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
-                </div>
-            </a>
-        </div>
-        <div class="col-lg-4 col-md-6">
-            <a href="">
-                <div class="border rounded-3 p-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="/img/design.jpg" width="150" class="rounded">
-                        <div>
-                            <h4>Graphic Design</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <iconify-icon inline icon="iconoir:design-pencil" width="20" height="20" flip="horizontal"></iconify-icon>
-                                <span>Design</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus consequuntur enim similique repellat facere rerum placeat. </p>
-                </div>
-            </a>
-        </div>
+        @endforelse
     </div>
 </div>
