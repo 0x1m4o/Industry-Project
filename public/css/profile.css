@@ -141,28 +141,79 @@
 
     .ilham {
         position: relative;
-        left: 80px;
-        width: 200px;
-        height: 120px;
-        margin: 30px 20px;
+        width: 150px;
+        height: 100px;
+        margin-bottom: 20px;
     }
-
-
 
     .pro-title {
         font-size: 15px;
-        width: 350px;
         text-align: center;
     }
 
     .pro-desc {
         font-size: 8px;
         text-align: center;
-        margin: 0
+        margin-bottom: 20px;
     }
 
     .col-width {
         width: 100%;
+
+    }
+
+    .col-width2 {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .btn-kunjungi {}
+
+    .btn-kunjungi2 {
+        width: 100px;
+        height: 35px;
+    }
+
+    .btn-to {
+        font-size: 11px;
+    }
+}
+
+@media screen  and (max-device-width: 319.9px) {
+
+    .row1 {
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+    }
+
+    .ilham {
+        position: relative;
+        width: 150px;
+        height: 100px;
+        margin-bottom: 20px;
+    }
+
+    .pro-title {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .pro-desc {
+        font-size: 8px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .col-width {
+        width: 100%;
+
+    }
+
+    .col-width2 {
+        display: flex;
+        justify-content: center;
 
     }
 

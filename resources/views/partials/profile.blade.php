@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="css/profile.css">
 <div class="container">
     <div class="row row1 my-5">
-        <div class="col-5">
-            <img class="ilham" src="img/ilham3.png" alt="">
+        <div class="col-5 col-width2">
+                <img class="ilham" src="img/ilham3.png" alt="">
 
         </div>
 

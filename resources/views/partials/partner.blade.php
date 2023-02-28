@@ -2,7 +2,7 @@
 
 <h1 class="text-center my-5 fw-bolder"> Partner </h1>
 
-<div class="container partner mb-5 grid">
+<div class="container partner grid">
         <div class="card d-flex justify-content-center">
             <div class="d-flex align-items-center img-center p-1">
                 <img class="card-img-top partner-logo" src="img/google.svg" alt="Card image cap">
