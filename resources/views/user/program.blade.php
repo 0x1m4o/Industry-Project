@@ -26,7 +26,7 @@
     <div class="row m-0 w-full g-2">
         @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">
-            <a href="">
+            <a href="{{ route('user.show', $program->id) }}">
                 <div class="border rounded-3 p-3 mt-3">
                     <div class="d-flex align-items-start gap-3">
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="150" class="rounded">
@@ -39,9 +39,6 @@
                         </div>
                     </div>
                     <p class="mt-3">{!! substr($program->deskripsi, 0, 100) !!} ...</p>
-                    <div class="d-flex justify-content-end">
-                        <a href="{{ route('user.show', $program->id) }}" role="button" class="btn btn-primary">Lihat Selengkapnya</a>
-                    </div>
                 </div>
             </a>
         </div>
