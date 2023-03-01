@@ -16,7 +16,6 @@
             </div>
         </div>
 
-
         <div class="card d-flex justify-content-center">
             <div class="d-flex align-items-center img-center p-1">
                 <img class="card-img-top partner-logo" src="img/apple.svg" alt="Card image cap">
@@ -28,7 +27,6 @@
                 <img class="card-img-top partner-logo" src="img/tesla.svg" alt="Card image cap">
             </div>
         </div>
-
 
         <div class="card d-flex justify-content-center">
             <div class="d-flex align-items-center img-center p-1">

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-<link rel="stylesheet" href="css/profil.css">
+<link rel="stylesheet" href="/css/profil.css">
 <style>
     a {
         text-decoration: none;
@@ -41,9 +41,9 @@
     </div>
 </header>
 
-<div class="container p-0" style="margin-top: 100px;">
-    <div class="row m-0 w-full g-2">
-        <div class="d-flex justify-content-end">
+<div class="container p-0" style="margin-top: 70px;">
+    <div class="row m-0 g-3">
+        <div class="d-flex justify-content-end mb-2">
             <div class="dropdown">
                 <button class="btn btn-lg btn-primary shadow-btn rounded-pill dropdown-toggle" style="background-color: #187BCD" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Kategori
@@ -56,23 +56,23 @@
             </div>
         </div>
         @forelse ($programs as $program)
-        <a href="p">
-        <div class="card" style="width: 25rem;">
-            <div class="d-flex">
-                <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card" alt="...">
-                <div class="my-1 w-100">
-                    <h4 class="prog-title">{{$program->nama}}</h4>
-
-                    <div class="d-flex justify-content-center mt-1">
-                        <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
-                        <h5 class="prog-title1">{{$program->category}}</h5>
+        <div class="col-lg-4 col-md-6">
+            <a href={{ route('user.show', ['id'=>$program->id]) }}>
+                <div class="card w-full">
+                    <div class="d-flex align-items-start">
+                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" alt="...">
+                        <div class="my-1 w-100 ms-2">
+                            <h4 class="mt-1">{{$program->nama}}</h4>
+                            <div class="d-flex justify-content-start mt-1">
+                                <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
+                                <h5 class="prog-title1">{{$program->category}}</h5>
+                            </div>
+                        </div>
                     </div>
-
+                    <p class="desc">{!! substr($program->deskripsi, 0, 100) !!}</p>
                 </div>
-            </div>
-            <p class="desc">{!! substr($program->deskripsi, 0, 100) !!}</p>
+            </a>
         </div>
-        </a>
         @empty
         <div class="alert alert-danger">
             Data Program belum Tersedia.

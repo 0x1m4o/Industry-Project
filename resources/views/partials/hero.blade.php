@@ -10,8 +10,8 @@
                     <div class="carousel-wrap">
                         <h1 class="program-title program-title-h1">Programming</h1>
                         <i class="program-title program-title-h4">"Bergabung dengan program pelatihan programming terbaik untuk meningkatkan kemampuan Anda."</i>
-                        <button class="btn mt-3 d-block mx-auto btn-lihat">Lihat
-                            Program</button>
+                        <a href="/program" class="btn mt-3 d-block mx-auto btn-lihat">Lihat
+                            Program</a>
                     </div>
                 </div>
             </div>
@@ -24,8 +24,8 @@
                     <div class="carousel-wrap">
                         <h1 class="program-title program-title-h1">Networking</h1>
                         <i class="program-title program-title-h4">"Pelajari networking dengan praktik langsung dan pengetahuan teori terkini."</i>
-                        <button class="btn mt-3 d-block mx-auto btn-lihat">Lihat
-                            Program</button>
+                        <a href="/program" class="btn mt-3 d-block mx-auto btn-lihat">Lihat
+                            Program</a>
                     </div>
 
                 </div>
@@ -40,8 +40,8 @@
                         <h1 class="program-title program-title-h1">Design</h1>
                         <i class="program-title program-title-h4">"Segera daftar untuk program pelatihan terbaik dan raih kesuksesan Anda di masa depan."
                         </i>
-                        <button type="button" class="btn mt-3  d-block mx-auto btn-lihat">Lihat
-                            Program</button>
+                        <a href="/program" class="btn mt-3 d-block mx-auto btn-lihat">Lihat
+                            Program</a>
                     </div>
                 </div>
             </div>

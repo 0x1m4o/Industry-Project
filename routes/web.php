@@ -49,7 +49,7 @@ Route::middleware(['guest:web'])->group(function () {
 });
 
 // Logout
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name(name: 'logout');
 
 // Forgot Password
 Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
@@ -60,7 +60,7 @@ Route::get('/reset-password', [ForgotController::class, 'reset'])->name('passwor
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
+Route::get('/program/{id}', [ProgramController::class, 'show'])->name(name: 'user.show');
 
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');

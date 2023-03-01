@@ -133,8 +133,9 @@ h5 {
 }
 
 .btn-lihat {
+    width: 150px;
     font-size: 15px;
-    padding: 10px px;
+    padding: 10px 0;
     font-weight: 700;
     letter-spacing: 0.04rem;
     background: #2e8cd8 !important;
