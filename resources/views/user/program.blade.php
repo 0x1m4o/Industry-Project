@@ -7,7 +7,7 @@
         color: #000;
     }
 
-    a:hover {
+    .card-program:hover {
         color: #000 !important;
     }
 
@@ -56,7 +56,7 @@
         </div>
         @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">
-            <a href="{{ route('user.show', $program->id) }}">
+            <a class="card-program" href="{{ route('user.show', $program->id) }}">
                 <div class="border rounded-3 p-3 mt-3">
                     <div class="d-flex align-items-start gap-3">
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="160" height="110" class="rounded">

@@ -35,7 +35,7 @@
 
 
             <div id="navbarSearchContent" class="rounded search-form navbar-collapse navbar-collapse-search collapse">
-                <form class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search">
+                <form class="d-flex m-0 justify-content-center align-items-center collapse navbar-collapse" role="search">
                     <div class="input-form d-flex">
                         <input class="form-control search-bar me-2" type="search" placeholder="Search"
                             aria-label="Search">
@@ -48,10 +48,10 @@
             <!-- Navbar Supported Content -->
             <div id="navbarSupportedContent"
                 class="mx-4 d-flex justify-content-end navbar-collapse offcanvas-end d-none">
-                <a class="btn btn-light box btn-log btn-masuk border-0 shadow-btn mx-3" role="button"
+                <a class="btn btn-light box btn-log btn-masuk border-0 mx-3" role="button"
                     href="/login">Masuk</a>
 
-                <a class="btn btn-light box btn-log btn-daftar border-0 shadow-btn mx-1" role="button"
+                <a class="btn btn-light box btn-log btn-daftar border-0 mx-1" role="button"
                     href="/register">Daftar</a>
             </div>
 
