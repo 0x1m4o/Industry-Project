@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Data Program - ITC</title>
     <link rel="icon" href="/img/itc.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -17,7 +18,11 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class='bx bx-plus-circle'></i> Tambah Program</a>
+                        <h2>Halo, {{ auth()->user()->name }}</h2>
+                        <div class="d-flex justify-content-between my-4">
+                            <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class='bx bx-plus-circle'></i> Tambah Program</a>
+                            <a href="{{ route('admin.logout') }}" class="btn btn-md btn-danger mb-3 "><i class="bi bi-box-arrow-left"></i> Logout</a>
+                        </div>
                         <table class="table table-bordered table-responsive">
                             <thead>
                               <tr>

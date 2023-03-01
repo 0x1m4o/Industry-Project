@@ -100,7 +100,7 @@
                         <div class="dropdown">
                             <a href="/profile" class="d-flex align-items-center justify-content-center a-tag"
                                 role="button" aria-expanded="false">
-                                <img class="profile-pict" src="/img/itc.png" alt="">
+                                <img class="profile-pict" src="{{ auth()->user()->avatar }}" alt="FFoto Profil">
                                 <h5 class="profile-title m-0 ms-2">{{ explode(' ', auth()->user()->name)[0] }}</h5>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-center dropdown-menu-profile py-2">
@@ -155,10 +155,10 @@
     </div>
     <div class="offcanvas-body">
         <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffc2; background: rgb(42, 42, 42)"
-            role="button" href="/login">Home</a>
+            role="button" href="/">Home</a>
 
         <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffc2; background: rgb(42, 42, 42)"
-            role="button" href="/login">Program</a>
+            role="button" href="/program">Program</a>
 
         <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffc2; background: rgb(42, 42, 42)"
             role="button" href="/login">Masuk</a>

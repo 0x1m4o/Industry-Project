@@ -18,7 +18,7 @@ class AdminSeeder extends Seeder
         Admin::create([
             'name'=>'Admin',
             'email'=>'admin@admin.com',
-            'phone'=>'085882844385',
+            'phone'=>'021-22131229',
             'password'=>bcrypt('password'),
         ]);
     }
