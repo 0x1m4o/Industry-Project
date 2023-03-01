@@ -41,7 +41,7 @@
     </div>
 </header>
 
-<div class="container p-0" style="margin-top: 70px;">
+<div class="container p-0 my-4">
     <div class="row m-0 g-3">
         <div class="d-flex justify-content-end mb-2">
             <div class="dropdown">

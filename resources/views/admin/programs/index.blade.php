@@ -19,7 +19,7 @@
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
                         <h2>Halo, {{ auth()->user()->name }}</h2>
-                        <div class="d-flex justify-content-between my-4">
+                        <div class="my-3">
                             <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class='bx bx-plus-circle'></i> Tambah Program</a>
                             <a href="{{ route('admin.logout') }}" class="btn btn-md btn-danger mb-3 "><i class="bi bi-box-arrow-left"></i> Logout</a>
                         </div>
