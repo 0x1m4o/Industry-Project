@@ -2,12 +2,15 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\AdminController;
 
 
 
 Route::get('/', function () {
     return redirect('/admin/program');
 });
+
+Route::get('/logout', [AdminLoginController::class, 'logout'])->name('admin.logout');
 
 // Guest
 Route::middleware(['guest:admin'])->group(function () {

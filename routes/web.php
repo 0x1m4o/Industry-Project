@@ -65,4 +65,4 @@ Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');
 
-Route::resource('/admin/program', AdminController::class);
+// Route::resource('/admin/program', AdminController::class);
