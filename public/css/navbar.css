@@ -79,12 +79,18 @@
     outline: none;
     box-shadow: none;
 }
-
+.nav-icons {
+    display: none;
+}
 /* Responsive Navbar */
 @media (max-width: 991px) {
     /* .btn-search {
         display: none;
     } */
+
+    .nav-icons {
+        display: inline-block;
+    }
 
     #navbarSearchContent form,
     #navbarSearchContent .input-form {

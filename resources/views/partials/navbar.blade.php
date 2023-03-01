@@ -16,46 +16,52 @@
 
             </div>
             <div class="nav-icons">
-                <button onclick="autofocus()"
-                    class="nav-btn navbar-toggler navbar-toggler-search text-black d-flex justify-content-center align-items-center"
-                    type="button" style="width: 60px;" id="btn-search" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSearchContent" type="button" aria-expanded="false"
-                    aria-controls="navbarSearchContent" aria-label="Toggle navigation">
-                    <iconify-icon class="d-flex justify-content-center align-items-center" icon="mingcute:search-3-line"
-                        style="color: gray;width: 35px"></iconify-icon>
-                </button>
-                <div class="dropdown">
-                    <a href="/profile">
-                        <button class="border-0 mx-2 px-1" type="button"
-                            style="width: 30px;background: transparent; height: 30px" aria-expanded="false">
-                            <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
+                <div class="row m-0 justify-content-center align-items-center">
+                    <div class="col">
+                        <button onclick="autofocus()"
+                            class="nav-btn navbar-toggler navbar-toggler-search text-black d-flex justify-content-center align-items-center"
+                            type="button" style="width: 60px;" id="btn-search" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSearchContent" type="button" aria-expanded="false"
+                            aria-controls="navbarSearchContent" aria-label="Toggle navigation">
+                            <iconify-icon class="d-flex justify-content-center align-items-center" icon="mingcute:search-3-line"
+                                style="color: gray;width: 35px"></iconify-icon>
                         </button>
-                    </a>
-                    <div class="dropdown-menu box dropdown-menu-start dropdown-menu-profile py-2">
-                        <div class="drop-wrapper p-1 px-2">
-                            <a class="a-tag item-drop" href="/profile">
-                                <div class="item-profile py-2 go-profile">
-                                    <iconify-icon class="ms-1" icon="ic:baseline-person" width="25px">
-                                    </iconify-icon>
-                                    <h5 class="ps-2">Profil</h5>
-                                </div>
+                    </div>
+                    <div class="col">
+                        <div class="dropdown">
+                            <a href="/profile">
+                                <button class="border-0 mx-2 px-1" type="button"
+                                    style="width: 50px;background: transparent; height: 50px" aria-expanded="false">
+                                    <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
+                                </button>
                             </a>
-                            <a class="a-tag item-drop" href="/program">
-                                <div class="item-profile py-2 go-program">
-                                    <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
-                                    </iconify-icon>
-                                    <h5 class="ps-2">Program</h5>
+                            <div class="dropdown-menu box dropdown-menu-start dropdown-menu-profile py-2">
+                                <div class="drop-wrapper p-1 px-2">
+                                    <a class="a-tag item-drop" href="/profile">
+                                        <div class="item-profile py-2 go-profile">
+                                            <iconify-icon class="ms-1" icon="ic:baseline-person" width="25px">
+                                            </iconify-icon>
+                                            <h5 class="ps-2">Profil</h5>
+                                        </div>
+                                    </a>
+                                    <a class="a-tag item-drop" href="/program">
+                                        <div class="item-profile py-2 go-program">
+                                            <iconify-icon class="ms-1" icon="game-icons:graduate-cap" width="25px">
+                                            </iconify-icon>
+                                            <h5 class="ps-2">Program</h5>
+                                        </div>
+                                    </a>
+                                    <hr class="my-2" style="border: 1px solid black;">
+                                    <a class="a-tag item-drop" href="/logout">
+                                        <div class="item-profile py-2 go-logout">
+                                            <iconify-icon class="ms-1" icon="ic:round-exit-to-app" rotate="180deg"
+                                                width="25px">
+                                            </iconify-icon>
+                                            <h5 class="ps-2">Log Out</h5>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                            <hr class="my-2" style="border: 1px solid black;">
-                            <a class="a-tag item-drop" href="/logout">
-                                <div class="item-profile py-2 go-logout">
-                                    <iconify-icon class="ms-1" icon="ic:round-exit-to-app" rotate="180deg"
-                                        width="25px">
-                                    </iconify-icon>
-                                    <h5 class="ps-2">Log Out</h5>
-                                </div>
-                            </a>
+                            </div>
                         </div>
                     </div>
                 </div>
