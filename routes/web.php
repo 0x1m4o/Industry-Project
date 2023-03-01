@@ -25,7 +25,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/profil', function () {
+Route::get('/profile', function () {
     return view('user.profil', [
         'title' => "Profile",
     ]);
