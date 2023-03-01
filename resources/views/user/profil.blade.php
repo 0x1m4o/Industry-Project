@@ -57,7 +57,7 @@
     </div>
     @empty
     <div class="alert alert-danger">
-        Belum mendaftar pada suatu program.
+        Belum mendaftar pada program.
     </div>
     @endforelse
 
