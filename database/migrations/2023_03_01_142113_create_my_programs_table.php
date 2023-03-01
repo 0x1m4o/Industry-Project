@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('name')->nullable();
             $table->string('email')->nullable();
             $table->string('no_hp')->nullable();
+            $table->string('program_id')->nullable();
             $table->string('image')->nullable();
             $table->string('title')->nullable();
             $table->string('category')->nullable();

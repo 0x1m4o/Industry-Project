@@ -29,7 +29,7 @@ class ProgramController extends Controller
         ]); 
     }
 
-    public function addmyprogram(Request $request, $id){
+    public function myprogram(Request $request, $id){
         $myprogram = new MyProgram;
         $program = Program::find($id);
         
@@ -37,6 +37,7 @@ class ProgramController extends Controller
         $myprogram->name = $request->name;
         $myprogram->email = $request->email;
         $myprogram->no_hp = $request->no_hp;
+        $myprogram->program_id = $program->id;
         $myprogram->image = $program->gambar;
         $myprogram->title = $program->nama;
         $myprogram->category = $program->category;
@@ -45,5 +46,16 @@ class ProgramController extends Controller
         $myprogram->save();
 
         return redirect()->back();
+    }
+
+    public function profile() {
+        $myprograms = MyProgram::where('user_id', auth()->user()->id)->get();
+        $programs = Program::where('id', $myprograms->program_id)->first();
+        // dd($myprograms);
+        return view('user.profil', [
+            'title' => "Profile",
+            'myprograms' => $myprograms,
+            'programs' => $programs
+        ]);
     }
 }

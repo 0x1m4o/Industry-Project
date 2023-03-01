@@ -77,7 +77,6 @@
         <div class="alert alert-danger">
             Data Program belum Tersedia.
         </div>
-        </a>
         @endforelse
     </div>
     <button class="btn btn-lg btn-primary shadow-btn rounded-pill d-block mx-auto my-5" style="background-color: #187BCD">

@@ -28,30 +28,39 @@
 
             <div class="d-flex d">
                 <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
-                <h4>{{ auth()->user()->no_hp }}</h4>
+                <h4  id="program">{{ auth()->user()->no_hp }}</h4>
             </div>
         </div>
     </div>
 </div>
 
-<div id="program" class="container my-5">
+<div class="container my-5">
     <h1 class="mb-4">Program Yang Saya Ikuti</h1>
 
-    <div class="card" style="width: 25rem;">
-        <div class="d-flex">
-            <img src="img/design.jpg" class="card-img-top img-card" alt="...">
-            <div class="my-3">
-                <h4 class="prog-title">UI/UX Developer</h4>
-
-                <div class="d-flex justify-content-center mt-1">
-                    <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
-                    <h5 class="prog-title1">Design</h5>
+    @forelse ($myprograms as $myprogram)
+    <div class="col-lg-4 col-md-6">
+        {{-- <a href={{ route('user.show', ['id'=>$program->id]) }}> --}}
+            <div class="card w-full">
+                <div class="d-flex align-items-start">
+                    <img src="{{ Storage::url('public/programs/').$myprogram->image }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
+                    <div class="my-1 w-100 ms-2">
+                        <h4 class="mt-1">{{ $myprogram->title }}</h4>
+                        <div class="d-flex justify-content-start mt-1">
+                            <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
+                            <h5 class="prog-title1">{{ $myprogram->category }}</h5>
+                        </div>
+                    </div>
                 </div>
-
+                <p class="desc">{!! substr($myprogram->description, 0, 100) !!}</p>
             </div>
-        </div>
-        <p class="desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt laboriosam, molestias voluptatum labore quae omnis ab consequatur unde fuga eum?.</p>
+        {{-- </a> --}}
     </div>
+    @empty
+    <div class="alert alert-danger">
+        Belum mendaftar pada suatu program.
+    </div>
+    @endforelse
+    
 </div>
 
 
