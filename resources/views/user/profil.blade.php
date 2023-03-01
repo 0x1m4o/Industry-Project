@@ -39,7 +39,7 @@
 
     @forelse ($myprograms as $myprogram)
     <div class="col-lg-4 col-md-6">
-        {{-- <a href={{ route('user.show', ['id'=>$program->id]) }}> --}}
+        <a href={{ route('user.show', ['id'=>$myprogram->program_id]) }}>
             <div class="card w-full">
                 <div class="d-flex align-items-start">
                     <img src="{{ Storage::url('public/programs/').$myprogram->image }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
@@ -53,14 +53,14 @@
                 </div>
                 <p class="desc">{!! substr($myprogram->description, 0, 100) !!}</p>
             </div>
-        {{-- </a> --}}
+        </a>
     </div>
     @empty
     <div class="alert alert-danger">
         Belum mendaftar pada suatu program.
     </div>
     @endforelse
-    
+
 </div>
 
 

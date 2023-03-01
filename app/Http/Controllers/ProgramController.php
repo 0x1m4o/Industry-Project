@@ -50,12 +50,9 @@ class ProgramController extends Controller
 
     public function profile() {
         $myprograms = MyProgram::where('user_id', auth()->user()->id)->get();
-        $programs = Program::where('id', $myprograms->program_id)->first();
-        // dd($myprograms);
         return view('user.profil', [
             'title' => "Profile",
             'myprograms' => $myprograms,
-            'programs' => $programs
         ]);
     }
 }
