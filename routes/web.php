@@ -25,6 +25,13 @@ Route::get('/', function () {
     ]);
 });
 
+// Admin Login
+Route::get('/admin/login', function () {
+    return view('admin.auth.login', [
+        'title' => "Login"
+    ]);
+});
+
 Route::middleware(['guest'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
