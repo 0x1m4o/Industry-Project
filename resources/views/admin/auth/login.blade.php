@@ -7,7 +7,7 @@
     <div class="login mx-auto shadow-sm border p-5 rounded-3" style="max-width: 600px; margin: 7rem 0">
         <h1 class="text-center mb-5 fw-bold">Masuk sebagai Admin</h1>
         @include('partials.messages')
-        <form method="post" action="/login">
+        <form method="post" action="/admin/login">
             @csrf
             <div class="mb-3">
                 <label for="email" class="form-label fs-4">Email</label>

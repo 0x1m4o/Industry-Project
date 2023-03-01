@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class AdminLoginController extends Controller
@@ -23,8 +24,9 @@ class AdminLoginController extends Controller
 
         if(Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/admin/banner');
+            return redirect('/');
         }
+
 
         return back()->with('login_error', 'Gagal Login');
     }
