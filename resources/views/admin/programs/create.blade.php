@@ -43,7 +43,7 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                               <label class="font-weight-bold">KATEGORI</label>
                               <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category') }}" placeholder="Pilih Programming, Design, Networking">
                           
@@ -53,7 +53,15 @@
                                       {{ $message }}
                                   </div>
                               @enderror
-                          </div>
+                            </div> --}}
+                            <div class="form-group">
+                                <label for="category" class="font-weight-bold">KATEGORI</label>
+                                <select class="form-control" id="category" name="category">
+                                    @foreach ($categories as $category)     
+                                  <option value="{{$category->name}}">{{$category->name}}</option>
+                                  @endforeach
+                                </select>
+                            </div>
 
                             <div class="form-group">
                                 <label class="font-weight-bold">DESKRIPSI</label>

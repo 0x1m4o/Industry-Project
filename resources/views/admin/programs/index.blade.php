@@ -18,7 +18,8 @@
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
                         <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class='bx bx-plus-circle'></i> Tambah Program</a>
-                        <table class="table table-bordered table-responsive">
+                        <div class="table-responsive">
+                        <table class="table table-bordered">
                             <thead>
                               <tr>
                                 <th scope="col">GAMBAR</th>
@@ -53,7 +54,8 @@
                                   </div>
                               @endforelse
                             </tbody>
-                          </table>  
+                          </table>
+                        </div>  
                           {{-- {{ $programs->links() }} --}}
                     </div>
                 </div>

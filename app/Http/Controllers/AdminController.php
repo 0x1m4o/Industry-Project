@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Program;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use Illuminate\Support\Facades\Storage;
 
 class AdminController extends Controller
@@ -31,7 +32,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.programs.create');
+        $categories = Category::all();
+        return view('admin.programs.create', compact('categories'));
     }
 
     /**
@@ -52,7 +54,7 @@ class AdminController extends Controller
     //upload image
     $gambar = $request->file('gambar');
     $gambar->storeAs('public/programs', $gambar->hashName());
-
+    
     $blog = Program::create([
         'gambar'     => $gambar->hashName(),
         'nama'     => $request->nama,
