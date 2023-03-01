@@ -55,50 +55,7 @@
                                   </div>
                               @endforelse
                             </tbody>
-                          </table>  
-                          {{-- {{ $programs->links() }} --}}
-=======
-                        <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3">Tambah Program</a>
-                        <div class="table-responsive">
-
-                            <table class="table table-bordered">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">GAMBAR</th>
-                                    <th scope="col">JUDUL</th>
-                                    <th scope="col">KATEGORI</th>
-                                    <th scope="col">DESKRIPSI</th>
-                                    <th scope="col">AKSI</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  @forelse ($programs as $program)
-                                    <tr>
-                                        <td class="text-center">
-                                            <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="rounded" style="width: 150px">
-                                        </td>
-                                        <td>{{ $program->nama }}</td>
-                                        <td>{{ $program->category }}</td>
-                                        <td>{!! $program->deskripsi !!}</td>
-                                        {{-- <td>{{ $program->updated_at }}</td> --}}
-                                        <td class="text-center" style="width: 100px;">
-                                            <form onsubmit="return confirm('Apakah Anda Yakin ?');" action="{{ route('program.destroy', $program->id) }}" method="POST">
-                                                <a href="{{ route('program.edit', $program->id) }}" class="btn btn-sm btn-primary"><i class='bx bxs-edit'></i></a>
-                                                @csrf
-                                                @method('DELETE')
-                                                <button type="submit" class="btn btn-sm btn-danger"><i class='bx bx-trash'></i></button>
-                                            </form>
-                                        </td>
-                                    </tr>
-                                  @empty
-                                      <div class="alert alert-danger">
-                                          Data Program belum Tersedia.
-                                      </div>
-                                  @endforelse
-                                </tbody>
-                            </table>
-                        </div>
->>>>>>> 6568993 (-)
+                          </table> 
                     </div>
                 </div>
             </div>
