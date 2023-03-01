@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/footer.css">
 <div class="container">
     <hr>
-    <div class="row2 d-flex">
+    <div class="row2 d-flex mb-5">
         <div class="col-5 p-0 logo-mob">
             <img src="/img/itc.png" alt="" class="footer-logo">
             <h4 class="jurusan">Information And Technology Club</h4>
@@ -47,8 +47,8 @@
             </div>
         </div>
 
-        <div class="maps col-6 p-0 logo-mob">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.73276124494!2d106.925874!3d-6.2064508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bcabb1368d7%3A0xea46dd080cc5e54c!2sSMKN%2069%20JAKARTA!5e0!3m2!1sid!2sid!4v1675236027934!5m2!1sid!2sid" width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="maps col-6 p-0 logo-mob mt-4">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15865.73276124494!2d106.925874!3d-6.2064508!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bcabb1368d7%3A0xea46dd080cc5e54c!2sSMKN%2069%20JAKARTA!5e0!3m2!1sid!2sid!4v1675236027934!5m2!1sid!2sid" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 

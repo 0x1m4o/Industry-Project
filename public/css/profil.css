@@ -5,7 +5,7 @@
 
 .box-pro {
     display: flex;
-    justify-content :center;
+    justify-content: center;
     position: relative;
 }
 
@@ -66,14 +66,21 @@
     border-radius: 0px;
 }
 
-.prog-title{
+.prog-title {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px;
+}
+
+.prog-title1 {
+    font-size: 15px;
     text-align: center;
     margin: 10px;
     margin-bottom: 5px;
 }
 
 .design-pen {
-    margin-top:7px;
+    margin-top: 7px;
 }
 
 .desc {

@@ -1,6 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
+<link rel="stylesheet" href="css/profil.css">
 <style>
     a {
         text-decoration: none;
@@ -55,23 +56,21 @@
             </div>
         </div>
         @forelse ($programs as $program)
-        <div class="col-lg-4 col-md-6">
-            <a href="{{ route('user.show', $program->id) }}">
-                <div class="border rounded-3 p-3 mt-3">
-                    <div class="d-flex align-items-start gap-3">
-                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" width="160" height="110" class="rounded">
-                        <div>
-                            <h4>{{$program->nama}}</h4>
-                            <div class="d-flex gap-2 align-items-center">
-                                <i class='bx bxs-category' style="font-size: 20px;"></i>
-                                <span>{{$program->category}}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="mt-3">{!! substr($program->deskripsi, 0, 100) !!} ...</p>
+        <div class="card" style="width: 25rem;">
+        <div class="d-flex">
+            <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card" alt="...">
+            <div class="my-1 w-100">
+                <h4 class="prog-title">{{$program->nama}}</h4>
+
+                <div class="d-flex justify-content-center mt-1">
+                    <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
+                    <h5 class="prog-title1">{{$program->category}}</h5>
                 </div>
-            </a>
+
+            </div>
         </div>
+        <p class="desc">{!! substr($program->deskripsi, 0, 100) !!}</p>
+    </div>
         @empty
         <div class="alert alert-danger">
             Data Program belum Tersedia.
