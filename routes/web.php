@@ -32,13 +32,13 @@ Route::get('/profil', function () {
 });
 
 // Admin Login
-Route::get('/admin/login', function () {
-    return view('admin.auth.login', [
-        'title' => "Login"
-    ]);
-});
+// Route::get('/admin/login', function () {
+//     return view('admin.auth.login', [
+//         'title' => "Login"
+//     ]);
+// });
 
-Route::middleware(['guest'])->group(function () {
+Route::middleware(['guest:web'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
     Route::post('/login', [LoginController::class, 'login']);
@@ -63,6 +63,4 @@ Route::get('/program', [ProgramController::class, 'index']);
 Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
 
 // Admin
-// Route::resource('admin', AdminController::class);
-
-Route::resource('admin/program', AdminController::class);
+Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');

@@ -21,9 +21,9 @@ class AdminLoginController extends Controller
             'password' => 'required|min:8',
         ]);
 
-        if(Auth::attempt($credentials)) {
+        if(Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/admin/program');
+            return redirect('/admin/banner');
         }
 
         return back()->with('login_error', 'Gagal Login');
