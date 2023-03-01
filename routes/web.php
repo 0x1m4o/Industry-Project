@@ -25,6 +25,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/profil', function () {
+    return view('user.profil', [
+        'title' => "Profile",
+    ]);
+});
+
 // Admin Login
 Route::get('/admin/login', function () {
     return view('admin.auth.login', [
