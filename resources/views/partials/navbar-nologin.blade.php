@@ -35,7 +35,7 @@
 
 
             <div id="navbarSearchContent" class="rounded search-form navbar-collapse navbar-collapse-search collapse">
-                <form class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search">
+                <form class="d-flex m-0 justify-content-center align-items-center collapse navbar-collapse" role="search">
                     <div class="input-form d-flex">
                         <input class="form-control search-bar me-2" type="search" placeholder="Search"
                             aria-label="Search">
