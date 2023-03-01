@@ -24,10 +24,19 @@ class AdminLoginController extends Controller
 
         if(Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect('/admin/program');
         }
 
 
         return back()->with('login_error', 'Gagal Login');
+    }
+
+    public function logout(Request $request){
+        Auth::guard('admin')->logout();
+        if(!Auth::guard('web')->check()){
+            $request->session()->invalidate();
+            $request->session()->regenerateToken();
+        } 
+        return back();
     }
 }
