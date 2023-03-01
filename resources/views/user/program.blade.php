@@ -8,7 +8,7 @@
         color: #000;
     }
 
-    a:hover {
+    .card-program:hover {
         color: #000 !important;
     }
 

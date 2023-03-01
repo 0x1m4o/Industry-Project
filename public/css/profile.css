@@ -1,11 +1,11 @@
 .pro-title {
-    text-align: center;
+    text-align: left;
     font-weight: 700;
     font-size: 40px
 }
 
 .pro-desc {
-    text-align: center;
+    text-align: left;
 }
 
 .ilham {
@@ -16,7 +16,7 @@
 
 
 .btn-kunjungi {
-    text-align: center;
+    text-align: left;
 }
 
 .btn-to {
@@ -28,6 +28,10 @@
 .btn-kunjungi2 {
     width: 120px;
     height: 40px;
+}
+
+.shadow-btn:hover {
+    background-color: #1567aa !important;
 }
 
 

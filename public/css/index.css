@@ -99,7 +99,8 @@ h5 {
 
 .program-title {
     font-family: "Montserrat", sans-serif;
-    font-weight: 700;
+    /* font-weight: 700; */
+    letter-spacing: .5px;
     color: #fff;
     text-shadow: 4px 4px #0000004c;
 }
@@ -178,6 +179,7 @@ h5 {
     }
     .program-title-h4 {
         font-size: 15px;
+        
     }
     .btn-lihat {
         width: 150px;
