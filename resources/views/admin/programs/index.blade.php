@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 </head>
 <body style="background: lightgray">
 
@@ -18,8 +17,8 @@
             <div class="col-md-12">
                 <div class="card border-0 shadow rounded">
                     <div class="card-body">
-                        <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class="bi bi-plus-circle"></i> Tambah Program</a>
-                        <table class="table table-bordered">
+                        <a href="{{ route('program.create') }}" class="btn btn-md btn-success mb-3"><i class='bx bx-plus-circle'></i> Tambah Program</a>
+                        <table class="table table-bordered table-responsive">
                             <thead>
                               <tr>
                                 <th scope="col">GAMBAR</th>

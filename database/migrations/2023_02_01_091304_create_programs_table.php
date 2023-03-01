@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('gambar')->nullable();
             $table->string('nama', 255)->nullable();
             $table->string('category')->nullable(); 
-            $table->longText('deskripsi', 255)->nullable();
+            $table->longText('deskripsi')->nullable();
             $table->timestamps();
         });
     }
