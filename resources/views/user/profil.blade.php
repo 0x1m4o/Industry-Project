@@ -15,20 +15,20 @@
     </div>
 
     <div class="box-pro">
-        <iconify-icon icon="carbon:user-avatar-filled" class="ava" width="200" height="200"></iconify-icon>
+        <img src="{{ auth()->user()->avatar }}" alt="" style="width:200px; height:200px;">
 
         <div class="desc-pro">
 
-            <h1>Badzlan Nur Dhabith</h1>
+            <h1>{{ auth()->user()->name }}</h1>
 
             <div class="d-flex d">
                 <iconify-icon icon="mdi:email" class="d-icon" width="20" height="20"></iconify-icon>
-                <h4>badzlan@gmail.com</h4>
+                <h4>{{ auth()->user()->email }}</h4>
             </div>
 
             <div class="d-flex d">
                 <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
-                <h4>123456789012</h4>
+                <h4>{{ auth()->user()->no_hp }}</h4>
             </div>
         </div>
     </div>
