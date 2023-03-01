@@ -1,0 +1,81 @@
+.pro {
+    background-color: #e9e9e9;
+    padding: 30px;
+}
+
+.box-pro {
+    display: flex;
+    justify-content :center;
+    position: relative;
+}
+
+.edit-pro {
+    display: flex;
+    justify-content: end;
+}
+
+.edit-pro h4 {
+    margin: 0px 15px;
+}
+
+.edit {
+    display: flex;
+}
+
+.ava {
+    color: #187bcd;
+}
+
+.pen {
+    color: #187bcd;
+}
+
+
+.d-icon {
+    margin-top: 3px;
+    color: #187bcd;
+    width: 25px;
+    height: 25px;
+}
+
+.desc-pro {
+    margin: 20px 100px;
+}
+
+.desc-pro h1 {
+    font-size: 60px;
+}
+
+.desc-pro .d {
+    margin: 10px 10px;
+}
+
+.desc-pro .d h4 {
+    margin-left: 10px;
+}
+
+.card {
+    padding: 10px;
+    background-color: #e9e9e9;
+}
+
+
+.img-card {
+    width: 150px;
+    margin: 10px;
+    border-radius: 0px;
+}
+
+.prog-title{
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 5px;
+}
+
+.design-pen {
+    margin-top:7px;
+}
+
+.desc {
+    margin: 10px;
+}

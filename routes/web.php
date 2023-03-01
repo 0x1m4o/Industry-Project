@@ -25,6 +25,12 @@ Route::get('/', function () {
     ]);
 });
 
+Route::get('/profil', function () {
+    return view('user.profil', [
+        'title' => "Profile",
+    ]);
+});
+
 Route::middleware(['guest'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
