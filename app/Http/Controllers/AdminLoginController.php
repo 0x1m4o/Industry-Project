@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
 class AdminLoginController extends Controller
@@ -21,10 +22,11 @@ class AdminLoginController extends Controller
             'password' => 'required|min:8',
         ]);
 
-        if(Auth::attempt($credentials)) {
+        if(Auth::guard('admin')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended('/admin/program');
+            return redirect('/');
         }
+
 
         return back()->with('login_error', 'Gagal Login');
     }
