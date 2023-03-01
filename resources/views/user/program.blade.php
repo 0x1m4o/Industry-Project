@@ -56,7 +56,7 @@
             </div>
         </div>
         @forelse ($programs as $program)
-        <a href="p">
+        <a href="{{ route('user.show', ['id'=>$program->id]) }}">
         <div class="card" style="width: 25rem;">
             <div class="d-flex">
                 <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card" alt="...">
