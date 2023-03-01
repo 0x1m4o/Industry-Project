@@ -84,7 +84,7 @@
 
 
             <div id="navbarSearchContent" class="rounded search-form navbar-collapse navbar-collapse-search collapse">
-                <form class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search">
+                <form action="/program" class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search">
                     <div class="input-form d-flex ">
                         <input class="form-control search-bar me-2 " type="search" placeholder="Search"
                             aria-label="Search" id="form-search">
@@ -112,7 +112,7 @@
                                             <h5>Profil</h5>
                                         </div>
                                     </a>
-                                    <a class="a-tag item-drop" href="/program">
+                                    <a class="a-tag item-drop" href="/profile#program">
                                         <div class="item-profile py-2 go-program">
                                             <iconify-icon class="ms-1" icon="game-icons:graduate-cap"
                                                 width="25px">

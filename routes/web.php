@@ -31,13 +31,6 @@ Route::get('/profile', function () {
     ]);
 });
 
-// Admin Login
-// Route::get('/admin/login', function () {
-//     return view('admin.auth.login', [
-//         'title' => "Login"
-//     ]);
-// });
-
 Route::middleware(['guest:web'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -49,7 +42,7 @@ Route::middleware(['guest:web'])->group(function () {
 });
 
 // Logout
-Route::get('/logout', [LoginController::class, 'logout'])->name(name: 'logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Forgot Password
 Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
@@ -60,7 +53,10 @@ Route::get('/reset-password', [ForgotController::class, 'reset'])->name('passwor
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-Route::get('/program/{id}', [ProgramController::class, 'show'])->name(name: 'user.show');
+Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
+
+// My Program
+Route::post('/my-program/{id}', [ProgramController::class, 'addmyprogram'])->name('add.myprogram');
 
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');

@@ -17,7 +17,11 @@
           <h1 class="card-title" style="font-weight: bold;">{{$programs->nama}}</h1>
           <p class="card-text d-flex mt-1"><i class='bx bxs-category align-items-center' style="font-size: 20px; padding-right: 5px;"></i> {{$programs->category}}</p>
           <p class="card-text">{!! $programs->deskripsi !!}</p>
-          <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary px-3 shadow-btn rounded-pill" style="background-color: #187BCD">Daftar Sekarang</button>
+          @auth
+            <button type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary px-3 shadow-btn rounded-pill" style="background-color: #187BCD">Daftar Sekarang</button>
+          @else
+          <a href="/login" type="button" class="btn btn-primary px-3 shadow-btn rounded-pill" style="background-color: #187BCD">Daftar Sekarang</a>
+          @endauth
         </div>
       </div>
     </div>
@@ -31,18 +35,21 @@
           <h1 class="modal-title fs-5" id="exampleModalLabel">Form Pendaftaran</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <label for="nama" class="form-label">Nama Lengkap</label>
-          <input type="text" class="input mb-3 form-control" placeholder="Vanessa Oey" required>
-          <label for="nama" class="form-label">Email</label>
-          <input type="text" class="input mb-3 form-control" placeholder="vanessaoey@example.com" required>
-          <label for="nama" class="form-label">Nomor Telepon</label>
-          <input type="text" class="input mb-3 form-control" placeholder="08267891276" required>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-          <button type="button" class="btn btn-primary">Daftar</button>
-        </div>
+        <form method="POST" action="{{ route('add.myprogram', $programs->id) }}">
+          @csrf
+          <div class="modal-body">
+            <label for="name" class="form-label">Nama Lengkap</label>
+            <input type="text" id="name" name="name" class="input mb-3 form-control" placeholder="Vanessa Oey" required>
+            <label for="email" class="form-label">Email</label>
+            <input type="text" id="email" name="email" class="input mb-3 form-control" placeholder="vanessaoey@example.com" required>
+            <label for="no_hp" class="form-label">Nomor Telepon</label>
+            <input type="text" id="no_hp" name="no_hp" class="input mb-3 form-control" placeholder="08267891276" required>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-primary">Daftar</button>
+          </div>
+        </form>
       </div>
     </div>
   </div>

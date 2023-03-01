@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\MyProgram;
 use App\Models\Program;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -28,4 +29,21 @@ class ProgramController extends Controller
         ]); 
     }
 
+    public function addmyprogram(Request $request, $id){
+        $myprogram = new MyProgram;
+        $program = Program::find($id);
+        
+        $myprogram->user_id = auth()->user()->id;
+        $myprogram->name = $request->name;
+        $myprogram->email = $request->email;
+        $myprogram->no_hp = $request->no_hp;
+        $myprogram->image = $program->gambar;
+        $myprogram->title = $program->nama;
+        $myprogram->category = $program->category;
+        $myprogram->description = $program->deskripsi;
+
+        $myprogram->save();
+
+        return redirect()->back();
+    }
 }
