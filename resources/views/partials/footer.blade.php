@@ -40,8 +40,10 @@
 
                 <div class="icon-background4">
                     <div>
-                        <iconify-icon icon="ic:baseline-whatsapp" style="color: white;" width="25" class="icon">
-                        </iconify-icon>
+                        <a href="https://chat.whatsapp.com/G1cXP4ni1ew1A7FzznS97a" target="_blank">
+                            <iconify-icon icon="ic:baseline-whatsapp" style="color: white;" width="25" class="icon">
+                            </iconify-icon>
+                        </a>
                     </div>
                 </div>
             </div>
