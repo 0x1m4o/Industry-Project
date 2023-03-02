@@ -36,7 +36,7 @@
     <div class="container px-lg-5 my-5">
         <div class="text-center text-dark">
             <h1 class="display-4 fw-bolder">Program</h1>
-            <i class="lead fw-normal text-dark-50 mb-0">Menuju pengangguran 0%</i>
+            <i class="lead fw-normal text-dark-50 mb-0">Program Pelatihan yang ada di IT Club</i>
         </div>
     </div>
 </header>
@@ -62,14 +62,26 @@
                     <div class="d-flex align-items-start">
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
                         <div class="my-1 w-100 ms-2">
-                            <h4 class="mt-1">{{$program->nama}}</h4>
+                            <h4 class="mt-1">
+                                @if (strlen($program->nama) >= 35)
+                                    {!! substr($program->nama, 0, 35   ).'...' !!}
+                                @else
+                                    {!! $program->nama !!}
+                                @endif
+                            </h4>
                             <div class="d-flex justify-content-start mt-1">
                                 <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
                                 <h5 class="prog-title1">{{$program->category}}</h5>
                             </div>
                         </div>
                     </div>
-                    <p class="desc">{!! substr($program->deskripsi, 0, 100) !!}</p>
+                    <p class="desc">
+                        @if (strlen($program->deskripsi) >= 100)
+                            {!! substr($program->deskripsi, 0, 100).'...' !!}
+                        @else
+                            {!! $program->deskripsi !!}
+                        @endif
+                    </p>
                 </div>
             </a>
         </div>
