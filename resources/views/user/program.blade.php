@@ -44,7 +44,7 @@
 <div class="container p-0 my-4">
     <div class="row m-0 g-3">
         <div class="d-flex justify-content-end mb-2">
-            <div class="dropdown">
+            {{-- <div class="dropdown">
                 <button class="btn btn-lg btn-primary shadow-btn rounded-pill dropdown-toggle" style="background-color: #187BCD" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Kategori
                 </button>
@@ -53,7 +53,15 @@
                     <li><a class="dropdown-item kategori" href="#">Networking</a></li>
                     <li><a class="dropdown-item kategori" href="#">Design</a></li>
                 </ul>
-            </div>
+            </div> --}}
+            <form action="/program" method="GET">
+                @csrf
+                <select class="form-select" style="width: 200px;" name="category">
+                    <option value="Programming" selected="{{isset($_GET['category']) && $_GET['category'] == 'Programming'}}">Programming</option>
+                    <option value="Design" selected="{{isset($_GET['category']) && $_GET['category'] == 'Design'}}">Design</option>
+                    <option value="Networking" selected="{{isset($_GET['category']) && $_GET['category'] == 'Networking'}}">Networking</option>
+                </select>
+            </form>
         </div>
         @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">

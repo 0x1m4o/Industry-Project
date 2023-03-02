@@ -61,7 +61,7 @@
                               <option value="{{$category->name}}">{{$category->name}}</option>
                               @endforeach
                             </select>
-                        </div>
+                          </div>
 
                             <div class="form-group">
                                 <label class="font-weight-bold">DESKRIPSI</label>

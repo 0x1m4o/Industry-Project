@@ -14,17 +14,21 @@ class ProgramController extends Controller
         //     'title' => 'Program',
         //     'program' => Program::all()
         // ]); 
-        
-        if($request) {
+        if($request->cari) {
             $programs = Program::where('nama', 'like', '%'.$request->cari.'%')->get();
+        } else if($request->category) {
+            $programs = Program::where('category', 'like', '%'.$request->category.'%')->get();
+            // $programs = Program::query()->when($request->category, function($query) use ($request){
+            //     return $query->where('category', 'like', '%'.$request->category.'%');
+            // });
         } else {
             $programs = Program::all();
         }
 
+
         return view('user.program', [
             'title' => "Program",
             'programs' => $programs,
-            // 'request' => $request->cari
         ]);
     }
 
