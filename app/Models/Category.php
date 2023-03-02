@@ -13,7 +13,6 @@ class Category extends Model
     protected $fillable = [
         'id',
         'name',
-        
     ];
 
     public function programs() {

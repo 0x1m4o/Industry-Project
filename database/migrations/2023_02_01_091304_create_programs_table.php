@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->string('gambar')->nullable();
             $table->string('nama', 255)->nullable();
-            $table->string('category')->nullable(); 
+            $table->string('category', 255)->nullable(); 
             $table->longText('deskripsi')->nullable();
             $table->timestamps();
         });

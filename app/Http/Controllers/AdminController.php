@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Program;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
@@ -31,7 +32,8 @@ class AdminController extends Controller
      */
     public function create()
     {
-        return view('admin.programs.create');
+        $categories = Category::all();
+        return view('admin.programs.create', compact('categories'));
     }
 
     /**
