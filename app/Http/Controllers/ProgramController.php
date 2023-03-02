@@ -9,15 +9,22 @@ use App\Http\Controllers\Controller;
 
 class ProgramController extends Controller
 {
-    public function index() {
+    public function index(Request $request) {
         // return view('user.program', [
         //     'title' => 'Program',
         //     'program' => Program::all()
         // ]); 
-        $programs = Program::all();
+        
+        if($request) {
+            $programs = Program::where('nama', 'like', '%'.$request->cari.'%')->get();
+        } else {
+            $programs = Program::all();
+        }
+
         return view('user.program', [
             'title' => "Program",
-            'programs' => $programs
+            'programs' => $programs,
+            // 'request' => $request->cari
         ]);
     }
 
