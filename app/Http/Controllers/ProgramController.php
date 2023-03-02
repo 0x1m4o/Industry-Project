@@ -44,8 +44,7 @@ class ProgramController extends Controller
         $myprogram->description = $program->deskripsi;
 
         $myprogram->save();
-
-        return redirect()->back();
+        return back()->with('success', 'Berhasil mendaftar program. Selamat Belajar!');
     }
 
     public function profile() {

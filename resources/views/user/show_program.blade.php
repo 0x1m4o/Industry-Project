@@ -7,7 +7,8 @@
 </style>
 
 @section('content')
-<div class="container" style="margin-top: 100px;">
+@include('partials.messages')
+<div class="container" style="margin: 20px auto;">
     <div class="row mx-0 align-items-start">
       <div class="col-md-5">
         <img src="{{ Storage::url('public/programs/').$programs->gambar }}" class="rounded w-100" alt="Gambar Kartu">
@@ -28,6 +29,7 @@
   </div>
 
 
+  @auth
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
       <div class="modal-content">
@@ -39,11 +41,11 @@
           @csrf
           <div class="modal-body">
             <label for="name" class="form-label">Nama Lengkap</label>
-            <input type="text" id="name" name="name" class="input mb-3 form-control" placeholder="Vanessa Oey" required>
+            <input type="text" id="name" name="name" class="input mb-3 form-control" placeholder="Vanessa Oey" value="{{ auth()->user()->name }}" required autofocus>
             <label for="email" class="form-label">Email</label>
-            <input type="text" id="email" name="email" class="input mb-3 form-control" placeholder="vanessaoey@example.com" required>
+            <input type="text" id="email" name="email" class="input mb-3 form-control" placeholder="vanessaoey@example.com" value="{{ auth()->user()->email }}" required>
             <label for="no_hp" class="form-label">Nomor Telepon</label>
-            <input type="text" id="no_hp" name="no_hp" class="input mb-3 form-control" placeholder="08267891276" required>
+            <input type="text" id="no_hp" name="no_hp" class="input mb-3 form-control" placeholder="08267891276" value="{{ auth()->user()->no_hp }}" required>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
@@ -53,4 +55,5 @@
       </div>
     </div>
   </div>
+  @endauth
 @endsection
