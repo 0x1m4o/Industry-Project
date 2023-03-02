@@ -13,12 +13,12 @@
     }
 
     div.border {
-        transition: all .1s linear;
+        transition: Semua .1s linear;
     }
 
     div.border:hover {
         background-color: #eeeeee;
-        transition: all .1s linear;
+        transition: Semua .1s linear;
     }
 
     .kategori:active {
@@ -44,24 +44,12 @@
 <div class="container p-0 my-4">
     <div class="row m-0 g-3">
         <div class="d-flex justify-content-end mb-2">
-            {{-- <div class="dropdown">
-                <button class="btn btn-lg btn-primary shadow-btn rounded-pill dropdown-toggle" style="background-color: #187BCD" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Kategori
-                </button>
-                <ul class="dropdown-menu p-0">
-                    <li><a class="dropdown-item kategori" href="#">Programming</a></li>
-                    <li><a class="dropdown-item kategori" href="#">Networking</a></li>
-                    <li><a class="dropdown-item kategori" href="#">Design</a></li>
-                </ul>
-            </div> --}}
-            <form action="/program" method="GET">
-                @csrf
-                <select class="form-select" style="width: 200px;" name="category">
-                    <option value="Programming" selected="{{isset($_GET['category']) && $_GET['category'] == 'Programming'}}">Programming</option>
-                    <option value="Design" selected="{{isset($_GET['category']) && $_GET['category'] == 'Design'}}">Design</option>
-                    <option value="Networking" selected="{{isset($_GET['category']) && $_GET['category'] == 'Networking'}}">Networking</option>
-                </select>
-            </form>
+            <select class="form-select" style="width: 200px;" name="category" id="category">
+                <option value="Semua">Semua</option>
+                <option value="Programming" {{ request('category') === 'Programming' ? 'selected' : '' }}>Programming</option>
+                <option value="Design" {{ request('category') === 'Design' ? 'selected' : '' }}>Design</option>
+                <option value="Networking" {{ request('category') === 'Networking' ? 'selected' : '' }}>Networking</option>
+            </select>
         </div>
         @forelse ($programs as $program)
         <div class="col-lg-4 col-md-6">
@@ -103,4 +91,15 @@
         Muat Lebih Banyak
     </button>
 </div>
+
+<script>
+    const category = document.querySelector('#category');
+    category.addEventListener('change', (e)=>{
+        if(e.target.value === 'Semua') {            
+            window.location.replace("/program");
+        } else {
+        window.location.replace(`/program?category=${e.target.value}`);
+        }
+    })
+</script>
 @endsection
