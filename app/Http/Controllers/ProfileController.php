@@ -36,6 +36,13 @@ class ProfileController extends Controller
                 'email' => $request->email,
                 'no_hp' => $request->no_hp,
             ]);     
+        }else{
+            User::where('id', auth()->user()->id)
+            ->update([
+                'name' => $request->name,
+                'email' => $request->email,
+                'no_hp' => $request->no_hp,
+            ]);
         }
 
         return back()->with('success', 'Berhasil mengubah profile!');
