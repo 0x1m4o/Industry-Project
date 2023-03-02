@@ -1,5 +1,6 @@
 @extends('layouts.main')
 
+<link rel="stylesheet" href="/css/profil.css">
 <style>
     .psi {
         text-decoration: none !important;
@@ -13,8 +14,8 @@
 
 
 @section('content')
+
 @include('partials.messages')
-<link rel="stylesheet" href="css/profil.css">
 <div class="pro">
     <div class="edit-pro">
 
