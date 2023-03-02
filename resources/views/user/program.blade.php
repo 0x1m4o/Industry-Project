@@ -59,8 +59,8 @@
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
                         <div class="my-1 w-100 ms-2">
                             <h4 class="mt-1">
-                                @if (strlen($program->nama) >= 28)
-                                    {!! substr($program->nama, 0, 28   ).'...' !!}
+                                @if (strlen($program->nama) >= 20)
+                                    {!! substr($program->nama, 0, 20   ).'...' !!}
                                 @else
                                     {!! $program->nama !!}
                                 @endif
