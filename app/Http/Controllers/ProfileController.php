@@ -18,15 +18,25 @@ class ProfileController extends Controller
     }
 
     public function update(Request $request){
-        $validated = $request->validate([
+        $request->validate([
+            'avatar' => 'image|mimes:jpeg,png,jpg,gif,svg,jfif',
             'name' => 'required|min:3',
-            'email' => '',
-            'no_hp' => '',
+            'email' => 'required',
+            'no_hp' => 'required',
         ]);
 
-        User::where('id', auth()->user()->id)
-        ->update($validated);
-
+        
+        if($request->hasFile('avatar')) {
+            $filename = time() . '-' . auth()->user()->id . '.' . $request->avatar->getClientOriginalExtension();
+            $request->avatar->storeAs('public/avatar', $filename);
+            User::where('id', auth()->user()->id)
+            ->update([
+                'avatar' => "/storage/avatar/" . $filename,
+                'name' => $request->name,
+                'email' => $request->email,
+                'no_hp' => $request->no_hp,
+            ]);     
+        }
 
         return back()->with('success', 'Berhasil mengubah profile!');
     }

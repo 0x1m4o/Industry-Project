@@ -19,7 +19,7 @@
 <div class="container p-0">
     <div class="row gy-4 justify-content-evenly align-items-center py-5">
         <div class="col-lg-3 col-md-5 order-2 order-md-1 text-center">
-            <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px;">
+            <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px; border-radius:50%;">
         </div>
         <div class="col-lg-8 col-md-6 order-3 order-md-2">
             <h1>{{ auth()->user()->name }}</h1>
@@ -45,12 +45,12 @@
             <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Profil</h1>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <form method="POST" action="">
+        <form method="POST" action="/profile" enctype="multipart/form-data">
             @csrf
             <div class="modal-body">
             <div class="mb-3">
-                <label for="formFile" class="form-label">Avatar (Upload Gambar dengan rasio 1 : 1)</label>
-                <input class="form-control" type="file" id="formFile">
+                <label for="avatar" class="form-label">Avatar (Upload Gambar dengan rasio 1 : 1)</label>
+                <input class="form-control" type="file" id="avatar" name="avatar">
             </div>
             <label for="name" class="form-label">Nama Lengkap</label>
             <input type="text" id="name" name="name" class="input mb-3 form-control" placeholder="Vanessa Oey" value="{{ auth()->user()->name }}" required autofocus>
