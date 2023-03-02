@@ -16,18 +16,18 @@
 @section('content')
 
 @include('partials.messages')
-<div class="container p-0">
-    <div class="row gy-4 justify-content-evenly align-items-center py-5">
+<div class="container-fluid py-5" style="background: #f4f4f4">
+    <div class="row gy-4 justify-content-evenly align-items-center">
         <div class="col-lg-3 col-md-5 order-2 order-md-1 text-center">
             <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px; border-radius:50%;">
         </div>
         <div class="col-lg-8 col-md-6 order-3 order-md-2">
             <h1>{{ auth()->user()->name }}</h1>
-            <div class="d-flex">
+            <div class="d-flex align-items-center gap-2">
                 <iconify-icon icon="mdi:email" class="d-icon" width="20" height="20"></iconify-icon>
                 <h5>{{ auth()->user()->email }}</h5>
             </div>
-            <div class="d-flex">
+            <div class="d-flex align-items-center gap-2">
                 <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
                 <h5>{{ auth()->user()->no_hp }}</h5>
             </div>
