@@ -42,7 +42,7 @@
 </header>
 
 <div class="container p-0 my-4">
-    <div class="row m-0 g-3">
+    <div class="row m-0 g-3 mb-5">
         <div class="d-flex justify-content-end mb-2">
             <select class="form-select" style="width: 200px;" name="category" id="category">
                 <option value="Semua">Semua</option>
@@ -59,15 +59,16 @@
                         <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
                         <div class="my-1 w-100 ms-2">
                             <h4 class="mt-1">
-                                @if (strlen($program->nama) >= 35)
-                                    {!! substr($program->nama, 0, 35   ).'...' !!}
+                                @if (strlen($program->nama) >= 28)
+                                    {!! substr($program->nama, 0, 28   ).'...' !!}
                                 @else
                                     {!! $program->nama !!}
                                 @endif
                             </h4>
-                            <div class="d-flex justify-content-start mt-1">
-                                <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
-                                <h5 class="prog-title1">{{$program->category}}</h5>
+                            <div class="d-flex justify-content-start align-items-center mt-1">
+                                {{-- <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon> --}}
+                                <i class='bx bxs-category' style="font-size: 20px;"></i>
+                                <h5 class="prog-title1 m-0 ms-2">{{$program->category}}</h5>
                             </div>
                         </div>
                     </div>
@@ -87,9 +88,9 @@
         </div>
         @endforelse
     </div>
-    <button class="btn btn-lg btn-primary shadow-btn rounded-pill d-block mx-auto my-5" style="background-color: #187BCD">
+    {{-- <button class="btn btn-lg btn-primary shadow-btn rounded-pill d-block mx-auto my-5" style="background-color: #187BCD">
         Muat Lebih Banyak
-    </button>
+    </button> --}}
 </div>
 
 <script>

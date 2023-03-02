@@ -37,16 +37,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label class="font-weight-bold">KATEGORI</label>
-                                <input type="text" class="form-control @error('category') is-invalid @enderror" name="category" value="{{ old('category', $program->category) }}" placeholder="Masukkan Kategori Program">
-                            
-                                <!-- error message untuk kategori -->
-                                @error('category')
-                                    <div class="alert alert-danger mt-2">
-                                        {{ $message }}
-                                    </div>
-                                @enderror
-                            </div>
+                                <label for="category" class="font-weight-bold">KATEGORI</label>
+                                <select class="form-control" id="category" name="category">
+                                    <option value="Programming" {{ $program->category == 'Programming' ? 'selected' : '' }}>Programming</option>
+                                    <option value="Design" {{ $program->category == 'Design' ? 'selected' : '' }}>Design</option>
+                                    <option value="Networking" {{ $program->category == 'Networking' ? 'selected' : '' }}>Networking</option>
+                                </select>
+                              </div>
 
                             <div class="form-group">
                                 <label class="font-weight-bold">DESKRIPSI</label>

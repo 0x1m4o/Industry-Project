@@ -79,7 +79,8 @@ class AdminController extends Controller
      */
     public function edit(Program $program)
     {
-        return view('admin.programs.edit', compact('program'));
+        $categories = Category::all();
+        return view('admin.programs.edit', compact('program', 'categories'));
     }
 
     /**
