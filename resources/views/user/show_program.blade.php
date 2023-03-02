@@ -7,8 +7,8 @@
 </style>
 
 @section('content')
-@include('partials.messages')
 <div class="container" style="margin: 20px auto;">
+  @include('partials.messages')
     <div class="row mx-0 align-items-start">
       <div class="col-md-5">
         <img src="{{ Storage::url('public/programs/').$programs->gambar }}" class="rounded w-100" alt="Gambar Kartu">

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\MyProgram;
 use App\Http\Controllers\Controller;
 use App\Models\User;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
@@ -17,18 +17,15 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function update(Request $request, User $user){
+    public function update(Request $request){
         $validated = $request->validate([
             'name' => 'required|min:3',
-            'date_of_birth' => '',
-            'gender' => '',
+            'email' => '',
+            'no_hp' => '',
         ]);
-        $user = User::findOrFail($user->id);
-        $user->update([
-            'name'     => $request->name,
-            'email'   => $request->email,
-            'no_hp'   => $request->no_hp,
-        ]);
+
+        User::where('id', auth()->user()->id)
+        ->update($validated);
 
 
         return back()->with('success', 'Berhasil mengubah profile!');
