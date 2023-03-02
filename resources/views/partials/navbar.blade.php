@@ -84,10 +84,10 @@
 
 
             <div id="navbarSearchContent" class="rounded search-form navbar-collapse navbar-collapse-search collapse">
-                <form action="/program" class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search">
+                <form action="/program" class="d-flex justify-content-center align-items-center collapse navbar-collapse" role="search" method="GET">
                     <div class="input-form d-flex ">
-                        <input class="form-control search-bar me-2 " type="search" placeholder="Search"
-                            aria-label="Search" id="form-search">
+                        <input class="form-control search-bar me-2 " type="text" placeholder="Cari Program"
+                            aria-label="Search" id="form-search" name="cari" value="">
                     </div>
                     <button class="btn btn-outline-dark btn-search box" type="submit">
                         <iconify-icon icon="mingcute:search-3-line"></iconify-icon>
