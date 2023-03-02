@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,19 +26,6 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/profile', function () {
-    return view('user.profil', [
-        'title' => "Profile",
-    ]);
-});
-
-// Admin Login
-// Route::get('/admin/login', function () {
-//     return view('admin.auth.login', [
-//         'title' => "Login"
-//     ]);
-// });
-
 Route::middleware(['guest:web'])->group(function () {
     // Login
     Route::get('/login', [LoginController::class, 'index'])->name('login');
@@ -49,7 +37,7 @@ Route::middleware(['guest:web'])->group(function () {
 });
 
 // Logout
-Route::get('/logout', [LoginController::class, 'logout'])->name(name: 'logout');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Forgot Password
 Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
@@ -57,10 +45,14 @@ Route::get('/forgot-password', [ForgotController::class, 'index'])->name('passwo
 // Reset Password
 Route::get('/reset-password', [ForgotController::class, 'reset'])->name('password.reset');
 
-
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
-Route::get('/program/{id}', [ProgramController::class, 'show'])->name(name: 'user.show');
+Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
+Route::post('/program/{id}', [ProgramController::class, 'myprogram'])->name('add.myprogram');
+
+// Profile
+Route::get('/profile', [ProfileController::class, 'profile']);
+Route::post('/profile', [ProfileController::class, 'update']);
 
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');

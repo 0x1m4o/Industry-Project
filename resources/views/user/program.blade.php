@@ -60,7 +60,7 @@
             <a href={{ route('user.show', ['id'=>$program->id]) }}>
                 <div class="card w-full">
                     <div class="d-flex align-items-start">
-                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" alt="...">
+                        <img src="{{ Storage::url('public/programs/').$program->gambar }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
                         <div class="my-1 w-100 ms-2">
                             <h4 class="mt-1">{{$program->nama}}</h4>
                             <div class="d-flex justify-content-start mt-1">
@@ -77,7 +77,6 @@
         <div class="alert alert-danger">
             Data Program belum Tersedia.
         </div>
-        </a>
         @endforelse
     </div>
     <button class="btn btn-lg btn-primary shadow-btn rounded-pill d-block mx-auto my-5" style="background-color: #187BCD">

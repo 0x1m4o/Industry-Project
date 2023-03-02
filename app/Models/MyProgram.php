@@ -4,18 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Program;
 
-class Category extends Model
+class MyProgram extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'id',
-        'name',
+        'user_id', 'name', 'email', 'no_hp', 'image', 'title', 'category', 'description'
     ];
-
-    public function programs() {
-        return $this->hasMany(Program::class);
-    }
 }
