@@ -16,31 +16,24 @@
 @section('content')
 
 @include('partials.messages')
-<div class="pro">
-    <div class="edit-pro">
-
-        <div class="edit">
-            <iconify-icon icon="mdi:pen" class="pen" width="25" height="25" data-bs-toggle="modal" data-bs-target="#edit" style="cursor: pointer;"></iconify-icon>
+<div class="container p-0">
+    <div class="row gy-4 justify-content-evenly align-items-center py-5">
+        <div class="col-lg-3 col-md-5 order-2 order-md-1 text-center">
+            <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px;">
         </div>
-
-    </div>
-
-    <div class="box-pro">
-        <img src="{{ auth()->user()->avatar }}" alt="" style="width:200px; height:200px;">
-
-        <div class="desc-pro">
-
+        <div class="col-lg-8 col-md-6 order-3 order-md-2">
             <h1>{{ auth()->user()->name }}</h1>
-
-            <div class="d-flex d">
+            <div class="d-flex">
                 <iconify-icon icon="mdi:email" class="d-icon" width="20" height="20"></iconify-icon>
-                <h4>{{ auth()->user()->email }}</h4>
+                <h5>{{ auth()->user()->email }}</h5>
             </div>
-
-            <div class="d-flex d">
+            <div class="d-flex">
                 <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
-                <h4  id="program">{{ auth()->user()->no_hp }}</h4>
+                <h5>{{ auth()->user()->no_hp }}</h5>
             </div>
+        </div>
+        <div class="col-lg-1 col-md-1 align-self-start text-end order-1 order-md-3">
+            <iconify-icon icon="mdi:pen" class="pen" width="25" height="25" data-bs-toggle="modal" data-bs-target="#edit" style="cursor: pointer;"></iconify-icon>
         </div>
     </div>
 </div>
