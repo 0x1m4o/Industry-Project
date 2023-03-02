@@ -100,7 +100,7 @@
                         <div class="dropdown">
                             <a href="/profile" class="d-flex align-items-center justify-content-center a-tag"
                                 role="button" aria-expanded="false">
-                                <img class="profile-pict" src="{{ auth()->user()->avatar }}" alt="FFoto Profil">
+                                <img class="profile-pict" src="{{ auth()->user()->avatar }}" alt="Foto Profil">
                                 <h5 class="profile-title m-0 ms-2">{{ explode(' ', auth()->user()->name)[0] }}</h5>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-center dropdown-menu-profile py-2">

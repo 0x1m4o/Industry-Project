@@ -4,7 +4,6 @@
 
 <link rel="stylesheet" href="css/profil.css">
 <div class="pro">
-
     <div class="edit-pro">
 
         <div class="edit">
