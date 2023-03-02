@@ -46,12 +46,4 @@ class ProgramController extends Controller
         $myprogram->save();
         return back()->with('success', 'Berhasil mendaftar program. Selamat Belajar!');
     }
-
-    public function profile() {
-        $myprograms = MyProgram::where('user_id', auth()->user()->id)->get();
-        return view('user.profil', [
-            'title' => "Profile",
-            'myprograms' => $myprograms,
-        ]);
-    }
 }

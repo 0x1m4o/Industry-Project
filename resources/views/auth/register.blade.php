@@ -9,35 +9,35 @@
             @csrf
                 <div class="mb-3">
                     <label for="nama" class="form-label fs-4">Nama Lengkap</label>
-                    <input type="text" class="input form-control @error('name') is-invalid @enderror" id="nama" name="name" aria-describedby="emailHelp" placeholder="Vanessa Oey" value="{{ old('name') }}" autofocus>
+                    <input type="text" class="input form-control @error('name') is-invalid @enderror" id="nama" name="name" aria-describedby="emailHelp" placeholder="Vanessa Oey" value="{{ old('name') }}" autofocus required>
                     @error('name')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="email" class="form-label fs-4">Email</label>
-                    <input type="email" class="input form-control @error('email') is-invalid @enderror" id="email" name="email" aria-describedby="emailHelp" placeholder="vanessaoey@example.com" value="{{ old('email') }}">
+                    <input type="email" class="input form-control @error('email') is-invalid @enderror" id="email" name="email" aria-describedby="emailHelp" placeholder="vanessaoey@example.com" value="{{ old('email') }}" required>
                     @error('email')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="tel" class="form-label fs-4">No Telepon</label>
-                    <input type="tel" class="input form-control @error('no_hp') is-invalid @enderror" id="no_hp" name="no_hp" aria-describedby="emailHelp" placeholder="08123456789" value="{{ old('no_hp') }}">
+                    <input type="tel" class="input form-control @error('no_hp') is-invalid @enderror" id="no_hp" name="no_hp" aria-describedby="emailHelp" placeholder="08123456789" value="{{ old('no_hp') }}" required>
                     @error('no_hp')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-3">
                     <label for="password" class="form-label fs-4">Kata Sandi</label>
-                    <input type="password" class="input form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="●●●●●●●●●●">
+                    <input type="password" class="input form-control @error('password') is-invalid @enderror" id="password" name="password" placeholder="●●●●●●●●●●" required>
                     @error('password')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror
                 </div>
                 <div class="mb-4">
                     <label for="confirm_password" class="form-label fs-4">Konfirmasi Kata Sandi</label>
-                    <input type="password" class="input form-control @error('confirm_password') is-invalid @enderror" id="confirm_password" name="confirm_password" placeholder="●●●●●●●●●●">
+                    <input type="password" class="input form-control @error('confirm_password') is-invalid @enderror" id="confirm_password" name="confirm_password" placeholder="●●●●●●●●●●" required>
                     @error('confirm_password')
                     <div class="invalid-feedback">{{ $message }}</div>
                     @enderror

@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProgramController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ForgotController;
+use App\Http\Controllers\Auth\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,12 +25,6 @@ Route::get('/', function () {
         'title' => "Homepage",
     ]);
 });
-
-// Route::get('/profile', function () {
-//     return view('user.profil', [
-//         'title' => "Profile",
-//     ]);
-// });
 
 Route::middleware(['guest:web'])->group(function () {
     // Login
@@ -55,7 +50,9 @@ Route::get('/program', [ProgramController::class, 'index']);
 Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
 Route::post('/program/{id}', [ProgramController::class, 'myprogram'])->name('add.myprogram');
 
-Route::get('/profile', [ProgramController::class, 'profile']);
+// Profile
+Route::get('/profile', [ProfileController::class, 'profile']);
+Route::post('/profile', [ProfileController::class, 'update']);
 
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');

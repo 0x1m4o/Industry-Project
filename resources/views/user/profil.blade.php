@@ -13,7 +13,7 @@
 
 
 @section('content')
-
+@include('partials.messages')
 <link rel="stylesheet" href="css/profil.css">
 <div class="pro">
 
