@@ -24,7 +24,7 @@
                 @enderror
             </div>
             <div class="mb-3 text-end">
-                <a href="/forgot-password" class="text-decoration-none text-dark" style="letter-spacing: 1px">Lupa Kata Sandi?</a>
+                <a href="/reset-password" class="text-decoration-none text-dark" style="letter-spacing: 1px">Lupa Kata Sandi?</a>
             </div>
             <button type="submit" class="btn fs-4 btn-primary shadow-btn d-block w-100 rounded-pill" style="background-color: #187BCD">Masuk</button>
             <span class="mt-5 text-center d-block fs-5">Belum Punya Akun? <a href="/register" class="text-decoration-none" style="color: #187BCD;">Daftar Sekarang</a></span>

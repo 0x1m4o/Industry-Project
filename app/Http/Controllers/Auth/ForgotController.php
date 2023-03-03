@@ -5,18 +5,13 @@ namespace App\Http\Controllers\auth;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Password;
-use Illuminate\Auth\Events\PasswordReset;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Carbon;
-use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class ForgotController extends Controller
 {
     // Password.request
     public function index(){
-        return view('auth.forgot', [
+        return view('auth.reset', [
             'title' => 'Lupa Kata Sandi',
         ]);
     }
@@ -35,10 +30,19 @@ class ForgotController extends Controller
     // }
 
     // Password.reset
-    public function reset(){
-        return view('auth.reset', [
-            'title' => 'Lupa Kata Sandi',
+    public function reset(Request $request){
+        $request->validate([
+            'email' => 'required',
+            'password' => 'required',
+            'confirm-password' => 'same:password|required'
         ]);
+
+        User::where('email', $request->email)
+            ->update([
+                'password' => bcrypt($request->password),
+            ]);
+        
+        return redirect('/login')->with('success', 'Berhasil mengubah password!');
         // $check_email = DB::table('password_resets')
         //     ->where(['email'=>$request->email])
         //     ->where('created_at','>',Carbon::now()->subMinutes(30))

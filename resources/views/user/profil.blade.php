@@ -77,7 +77,7 @@
                 <div class="d-flex align-items-start">
                     <img src="{{ Storage::url('public/programs/').$myprogram->image }}" class="card-img-top img-card rounded" style="width: 200px; height: 100px; object-fit: cover;">
                     <div class="my-1 w-100 ms-2">
-                        <a class="psi" href={{ route('user.show', ['id'=>$myprogram->program_id]) }}>
+                        <a class="psi" href={{ route('show.myprogram', ['id'=>$myprogram->program_id]) }}>
                             <h4 class="mt-1">{{ $myprogram->title }}</h4>
                         </a>
                         <div class="d-flex justify-content-start mt-1">

@@ -33,6 +33,14 @@ class ProgramController extends Controller
         ]); 
     }
 
+    public function showmyprogram($id, Program $programs) {
+        $programs = Program::where('id', $id)->first();
+        return view('user.show_myprogram', [
+            'title' => $programs->nama,
+            'programs' => $programs
+        ]); 
+    }
+
     public function myprogram(Request $request, $id){
         $myprogram = new MyProgram;
         $program = Program::find($id);

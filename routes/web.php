@@ -39,17 +39,16 @@ Route::middleware(['guest:web'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-
-// Forgot Password
-Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
-
 // Reset Password
-Route::get('/reset-password', [ForgotController::class, 'reset'])->name('password.reset');
+Route::get('/reset-password', [ForgotController::class, 'index']);
+Route::post('/reset-password', [ForgotController::class, 'reset'])->name('password.reset');
 
 // Program
 Route::get('/program', [ProgramController::class, 'index']);
 Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show');
-Route::post('/program/{id}', [ProgramController::class, 'myprogram'])->name('add.myprogram');
+
+Route::get('/myprogram/{id}', [ProgramController::class, 'showmyprogram'])->name('show.myprogram');
+Route::post('/myprogram/{id}', [ProgramController::class, 'myprogram'])->name('add.myprogram');
 
 // Profile
 Route::get('/profile', [ProfileController::class, 'profile']);
