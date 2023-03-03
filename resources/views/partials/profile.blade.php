@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/profile.css">
 <div class="container" style="margin: 100px auto;">
-    <div class="row gap-3">
+    <div class="row gap-5">
         <div class="col-md-5">
             <img class="w-100 rounded-3" src="/img/pp.jpg">
         </div>
@@ -12,7 +12,7 @@
                 </p>
             </div>
             <div class="container-fluid btn-kunjungi p-0">
-                <button type="submit" class="btn btn-lg btn-primary shadow-btn px-5 rounded-pill" style="background-color: #187BCD">Selengkapnya</button>
+                <a href="/program" class="btn btn-lg btn-primary shadow-btn px-5 rounded-pill" style="background-color: #187BCD">Selengkapnya</a>
             </div>
         </div>
     </div>
