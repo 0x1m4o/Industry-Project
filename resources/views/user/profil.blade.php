@@ -80,10 +80,10 @@
                         <a class="psi" href={{ route('show.myprogram', ['id'=>$myprogram->program_id]) }}>
                             <h4 class="mt-1">{{ $myprogram->title }}</h4>
                         </a>
-                        <div class="d-flex justify-content-start mt-1">
-                            <iconify-icon icon="iconoir:design-pencil" class="design-pen" width="25" height="25"></iconify-icon>
-                            <h5 class="prog-title1">{{ $myprogram->category }}</h5>
-                        </div>
+                        <div class="d-flex justify-content-start align-items-center mt-1">
+                                <i class='bx bxs-category' style="font-size: 20px;"></i>
+                                <h5 class="prog-title1 m-0 ms-2">{{$myprogram->category}}</h5>
+                            </div>
                     </div>
                 </div>
                 <p class="desc">{!! substr($myprogram->description, 0, 100) !!}</p>
