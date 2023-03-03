@@ -9,7 +9,7 @@
     }
 
     .card-program:hover {
-        color: #000 !important;
+        color: #f4f4f4 !important;
     }
 
     div.border {
@@ -60,9 +60,9 @@
                         <div class="my-1 w-100 ms-2">
                             <h4 class="mt-1">
                                 @if (strlen($program->nama) >= 20)
-                                    {!! substr($program->nama, 0, 20   ).'...' !!}
+                                {!! substr($program->nama, 0, 20 ).'...' !!}
                                 @else
-                                    {!! $program->nama !!}
+                                {!! $program->nama !!}
                                 @endif
                             </h4>
                             <div class="d-flex justify-content-start align-items-center mt-1">
@@ -74,9 +74,9 @@
                     </div>
                     <p class="desc">
                         @if (strlen($program->deskripsi) >= 100)
-                            {!! substr($program->deskripsi, 0, 100).'...' !!}
+                        {!! substr($program->deskripsi, 0, 100).'...' !!}
                         @else
-                            {!! $program->deskripsi !!}
+                        {!! $program->deskripsi !!}
                         @endif
                     </p>
                 </div>
@@ -95,11 +95,11 @@
 
 <script>
     const category = document.querySelector('#category');
-    category.addEventListener('change', (e)=>{
-        if(e.target.value === 'Semua') {            
+    category.addEventListener('change', (e) => {
+        if (e.target.value === 'Semua') {
             window.location.replace("/program");
         } else {
-        window.location.replace(`/program?category=${e.target.value}`);
+            window.location.replace(`/program?category=${e.target.value}`);
         }
     })
 </script>

@@ -34,10 +34,11 @@ Route::middleware(['guest:web'])->group(function () {
     // Register
     Route::get('/register', [RegisterController::class, 'index'])->name('register');
     Route::post('/register', [RegisterController::class, 'register']);
+    
+    // Logout
+    Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
-// Logout
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 // Forgot Password
 Route::get('/forgot-password', [ForgotController::class, 'index'])->name('password.request');
