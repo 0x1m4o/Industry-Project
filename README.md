@@ -12,7 +12,8 @@ Wireframe : https://whimsical.com/project-kelas-industri-NRuVR9tAUqHLubDgZUPrtW 
 
 ## Prerequisite
 - Already install php and mysql using [xampp](https://www.apachefriends.org/download.html).
-- Already install [Composer](https://getcomposer.org/download/).
+- Already install [composer](https://getcomposer.org/download/).
+- Already install [npm](https://www.npmjs.com/package/npm).
 
 ## Step by step running project
 ### 1. Clone this repository
