@@ -13,7 +13,7 @@ git clone https://github.com/0x1m4o/Industry-Project.git
 ```
 or 
 #### Download the zip file
-![download zip](https://raw.githubusercontent.com/0x1m4o/Industry-Project/main/public/img/image.png?token=GHSAT0AAAAAAB4JMNYLYE6Z7KBLSVTULJAYZAJ3SSA)
+![download zip](https://github.com/0x1m4o/Industry-Project/blob/main/public/img/image.png)
 
 #### 2. Go to directory 
 ```
