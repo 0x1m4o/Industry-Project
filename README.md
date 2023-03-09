@@ -7,6 +7,8 @@ Technology :
 - [Laravel](https://laravel.com/).
 - [Bootstrap](https://getbootstrap.com/).
 
+Wireframe : https://whimsical.com/project-kelas-industri-NRuVR9tAUqHLubDgZUPrtW (Password : 12345678)
+
 ## Prerequisite
 - Already install php and mysql using [xampp](https://www.apachefriends.org/download.html).
 - Already install [Composer](https://getcomposer.org/download/).
