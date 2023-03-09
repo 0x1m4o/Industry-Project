@@ -30,7 +30,7 @@ cd Industry-Project
 composer install
 ```
 
-### 4. Install dependency with composer
+### 4. Install dependency with npm
 ```
 npm install
 ```
