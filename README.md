@@ -6,6 +6,7 @@ Final Project "Daftar Program" Web Application from Kelas Industri (Institut Kem
 Technology :
 - [Laravel](https://laravel.com/).
 - [Bootstrap](https://getbootstrap.com/).
+- [MySQL](https://www.mysql.com/)
 
 Wireframe : https://whimsical.com/project-kelas-industri-NRuVR9tAUqHLubDgZUPrtW (Password : 12345678)
 
