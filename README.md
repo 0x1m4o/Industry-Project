@@ -31,3 +31,32 @@ npm install
 ```
 
 #### 5. Copy the content of ```.env.example``` file then create ```.env``` file and paste to ```.env``` file.
+
+
+#### 6. Create Database with the same name as ```DB_DATABASE``` from   ```.env``` file.
+
+#### 7. Run migration
+```
+php artisan migrate:fresh --seed
+```
+
+#### 8. Link the storage to public folder
+```
+php artisan storage:link
+```
+
+#### 9. Start the server and vite
+```
+php artisan serve
+```
+```
+npm run dev
+```
+
+### Authors
+
+- [@badzlan](https://github.com/badzlan)
+- [@MitsukiSaiga](https://github.com/MitsukiSaiga)
+- [@ridwanalfarezi](https://github.com/ridwanalfarezi)
+- [@iyanSGN](https://github.com/iyanSGN)
+- [@0x1m4o](https://github.com/0x1m4o)
