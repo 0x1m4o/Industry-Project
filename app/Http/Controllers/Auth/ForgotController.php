@@ -42,7 +42,7 @@ class ForgotController extends Controller
                 'password' => bcrypt($request->password),
             ]);
         
-        return redirect('/login')->with('success', 'Berhasil mengubah password!');
+        return redirect('/login')->with('success', 'Berhasil mengubah kata sandi!');
         // $check_email = DB::table('password_resets')
         //     ->where(['email'=>$request->email])
         //     ->where('created_at','>',Carbon::now()->subMinutes(30))

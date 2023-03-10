@@ -39,6 +39,12 @@ Route::middleware(['guest:web'])->group(function () {
     Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 });
 
+Route::middleware(['auth:web'])->group(function () {
+    // Profile
+    Route::get('/profile', [ProfileController::class, 'profile']);
+    Route::post('/profile', [ProfileController::class, 'update']);
+});
+
 // Reset Password
 Route::get('/reset-password', [ForgotController::class, 'index']);
 Route::post('/reset-password', [ForgotController::class, 'reset'])->name('password.reset');
@@ -50,9 +56,6 @@ Route::get('/program/{id}', [ProgramController::class, 'show'])->name('user.show
 Route::get('/myprogram/{id}', [ProgramController::class, 'showmyprogram'])->name('show.myprogram');
 Route::post('/myprogram/{id}', [ProgramController::class, 'myprogram'])->name('add.myprogram');
 
-// Profile
-Route::get('/profile', [ProfileController::class, 'profile']);
-Route::post('/profile', [ProfileController::class, 'update']);
 
 // Admin
 Route::prefix('/admin')->group(__DIR__.'/admin_routes.php');
