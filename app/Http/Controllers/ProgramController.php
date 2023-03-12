@@ -15,7 +15,7 @@ class ProgramController extends Controller
         } else if($request->category) {
             $programs = Program::where('category', 'like', '%'.$request->category.'%')->get();
         } else {
-            $programs = Program::all();
+            $programs = Program::paginate(3);
         }
 
 

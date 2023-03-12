@@ -93,6 +93,8 @@
     </button> --}}
 </div>
 
+{{ $programs->links() }}
+
 <script>
     const category = document.querySelector('#category');
     category.addEventListener('change', (e) => {
