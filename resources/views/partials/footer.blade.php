@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/footer.css">
 <div class="container">
     <hr>
-    <div class="row2 d-flex mb-5">
+    <div class="row2 d-flex justify-content-center mb-5">
         <div class="col-5 p-0 logo-mob">
             <img src="/img/itc.png" alt="" class="footer-logo">
             <h4 class="jurusan">Information And Technology Club</h4>

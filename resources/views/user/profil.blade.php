@@ -17,23 +17,25 @@
 
 @include('partials.messages')
 <div class="container-fluid py-5" style="background: #f4f4f4">
-    <div class="row gy-4 justify-content-evenly align-items-center">
-        <div class="col-lg-3 col-md-5 order-2 order-md-1 text-center">
-            <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px; border-radius:50%;">
-        </div>
-        <div class="col-lg-8 col-md-6 order-3 order-md-2">
-            <h1>{{ auth()->user()->name }}</h1>
-            <div class="d-flex align-items-center gap-2">
-                <iconify-icon icon="mdi:email" class="d-icon" width="20" height="20"></iconify-icon>
-                <h5>{{ auth()->user()->email }}</h5>
+    <div class="container">
+        <div class="row gy-4 align-items-center m-0">
+            <div class="col-lg-3 col-md-5 order-2 order-md-1 text-center">
+                <img src="{{ auth()->user()->avatar }}" style="width:200px; height:200px; border-radius:50%;">
             </div>
-            <div class="d-flex align-items-center gap-2">
-                <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
-                <h5>{{ auth()->user()->no_hp }}</h5>
+            <div class="col-lg-8 col-md-6 order-3 order-md-2">
+                <h1>{{ auth()->user()->name }}</h1>
+                <div class="d-flex align-items-center gap-2">
+                    <iconify-icon icon="mdi:email" class="d-icon" width="20" height="20"></iconify-icon>
+                    <h5>{{ auth()->user()->email }}</h5>
+                </div>
+                <div class="d-flex align-items-center gap-2">
+                    <iconify-icon icon="mdi:telephone" class="d-icon" width="20" height="20"></iconify-icon>
+                    <h5>{{ auth()->user()->no_hp }}</h5>
+                </div>
             </div>
-        </div>
-        <div class="col-lg-1 col-md-1 align-self-start text-end order-1 order-md-3">
-            <iconify-icon icon="mdi:pen" class="pen" width="25" height="25" data-bs-toggle="modal" data-bs-target="#edit" style="cursor: pointer;"></iconify-icon>
+            <div class="col-lg-1 col-md-1 align-self-start text-end order-1 order-md-3">
+                <iconify-icon icon="mdi:pen" class="pen" width="25" height="25" data-bs-toggle="modal" data-bs-target="#edit" style="cursor: pointer;"></iconify-icon>
+            </div>
         </div>
     </div>
 </div>
@@ -81,9 +83,9 @@
                             <h4 class="mt-1">{{ $myprogram->title }}</h4>
                         </a>
                         <div class="d-flex justify-content-start align-items-center mt-1">
-                                <i class='bx bxs-category' style="font-size: 20px;"></i>
-                                <h5 class="prog-title1 m-0 ms-2">{{$myprogram->category}}</h5>
-                            </div>
+                            <i class='bx bxs-category' style="font-size: 20px;"></i>
+                            <h5 class="prog-title1 m-0 ms-2">{{$myprogram->category}}</h5>
+                        </div>
                     </div>
                 </div>
                 <p class="desc">{!! substr($myprogram->description, 0, 100) !!}</p>
