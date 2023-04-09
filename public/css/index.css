@@ -100,7 +100,7 @@ h5 {
 .program-title {
     font-family: "Montserrat", sans-serif;
     /* font-weight: 700; */
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     color: #fff;
     text-shadow: 4px 4px #0000004c;
 }
@@ -157,16 +157,17 @@ h5 {
         font-size: 18px;
     }
 }
-@media screen and (min-device-width: 500px) and (max-device-width: 991.9px) {
+@media screen and (min-device-width: 500px) {
     .program-title-h1 {
-        font-size: 60px;
+        font-size: 30px;
     }
 
     .program-title-h4 {
         font-size: 16px;
     }
 }
-@media screen and (min-device-width: 500px) and (max-device-width: 767.9px) {
+/* 
+@media screen and (min-device-width: 500px) {
     .carousel-caption {
         display: block !important;
         position: absolute;
@@ -187,12 +188,12 @@ h5 {
         font-size: 11px;
     }
 }
-@media screen and (min-device-width: 320px) and (max-device-width: 499.9px) {
+@media screen and (min-device-width: 320px) {
     .carousel-caption {
         display: block !important;
     }
     .program-title-h1 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     .program-title-h4 {
         font-size: 8px;
@@ -208,7 +209,7 @@ h5 {
     }
 
     .program-title-h1 {
-        font-size: 20px;
+        font-size: 20px !important;
     }
     .program-title-h4 {
         font-size: 8px;
@@ -217,6 +218,4 @@ h5 {
         width: 100px;
         font-size: 8px;
     }
-}
-
-
+} */
