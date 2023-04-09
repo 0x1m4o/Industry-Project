@@ -148,18 +148,18 @@ h5 {
     background: #187bcd !important;
 }
 
-@media screen and (min-device-width: 992px) and (max-device-width: 1199.9px) {
+@media screen and (max-width: 800px) {
     .program-title-h1 {
-        font-size: 70px;
+        font-size: 50px;
     }
 
     .program-title-h4 {
         font-size: 18px;
     }
 }
-@media screen and (min-device-width: 500px) {
+@media screen and (max-width: 500px) {
     .program-title-h1 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .program-title-h4 {
