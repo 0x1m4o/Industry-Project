@@ -32,7 +32,7 @@
                             <a href="/profile">
                                 <button class="border-0 mx-2 px-1" type="button"
                                     style="width: 50px;background: transparent; height: 50px" aria-expanded="false">
-                                    <img class="profile-pict profile-pict-tog" src="/img/itc.png" alt="">
+                                    <img class="profile-pict profile-pict-tog" src="{{ auth()->user()->avatar }}" alt="">
                                 </button>
                             </a>
                             <div class="dropdown-menu box dropdown-menu-start dropdown-menu-profile py-2">
@@ -159,12 +159,6 @@
 
         <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffc2; background: rgb(42, 42, 42)"
             role="button" href="/program">Program</a>
-
-        <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffc2; background: rgb(42, 42, 42)"
-            role="button" href="/login">Masuk</a>
-
-        <a class="btn btn-light btn-offcanvas w-100 mb-2" style="color: #ffffffb5; background: rgb(42, 42, 42)"
-            role="button" href="/register">Daftar</a>
     </div>
 </div>
 
