@@ -11,11 +11,11 @@ class ProgramController extends Controller
 {
     public function index(Request $request) {
         if($request->cari) {
-            $programs = Program::where('nama', 'like', '%'.$request->cari.'%')->get();
+            $programs = Program::where('nama', 'like', '%'.$request->cari.'%')->paginate(6);
         } else if($request->category) {
-            $programs = Program::where('category', 'like', '%'.$request->category.'%')->get();
+            $programs = Program::where('category', 'like', '%'.$request->category.'%')->paginate(6);
         } else {
-            $programs = Program::paginate(3);
+            $programs = Program::paginate(6);
         }
 
 

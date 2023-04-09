@@ -93,7 +93,10 @@
     </button> --}}
 </div>
 
-{{ $programs->links() }}
+<div class="d-flex justify-content-center">
+    {{ $programs->links() }}
+</div>
+
 
 <script>
     const category = document.querySelector('#category');
