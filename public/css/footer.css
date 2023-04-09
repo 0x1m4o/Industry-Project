@@ -1,12 +1,13 @@
 .footer-logo {
     width: 85px;
     height: 80px;
-    margin: 30px 130px;
+    margin-block: 2rem;
 }
 
 .jurusan {
     font-size: 20px;
     font-weight: 600;
+    text-align: center;
 }
 
 .row {
@@ -61,7 +62,7 @@
 
 .sosmed {
     display: flex;
-    margin: 24px 40px 0px 40px;
+    justify-content: center;
 }
 
 .icon {
